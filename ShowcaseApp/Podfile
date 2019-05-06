@@ -1,0 +1,16 @@
+source 'sso://cpdc-internal/firebase.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+use_frameworks!
+
+pod 'FirebaseMLCommon'
+pod 'FirebaseMLVision'
+pod 'FirebaseMLVisionObjectDetection'
+
+pod 'MaterialComponents', :git => 'https://github.com/material-components/material-components-ios.git', :branch => 'develop'
+pod 'PINRemoteImage'
+
+target 'ShowcaseApp' do
+end
