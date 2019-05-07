@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 #import "FIRImageUtilities.h"
 
+#import <MetalKit/MetalKit.h>
+
 #ifdef __ARM_NEON__
 #import "arm_neon.h"
 #endif
@@ -30,9 +32,8 @@ static CIContext *gCIContext;
 #pragma mark - NSObject
 
 + (void)initialize {
-  if (self == [FIRImageUtilities self]) {
-    EAGLContext *eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
-    gCIContext = [CIContext contextWithEAGLContext:eaglContext options:nil];
+  if ([self isKindOfClass:[FIRImageUtilities class]]) {
+    gCIContext = [CIContext contextWithMTLDevice:MTLCreateSystemDefaultDevice()];
   }
 }
 
@@ -58,7 +59,7 @@ static CIContext *gCIContext;
   size_t width = CVPixelBufferGetWidth(imageBuffer);
   size_t height = CVPixelBufferGetHeight(imageBuffer);
 
-  // TODO: Adds more support for non-RGB color space.
+  // TODO: Add more support for non-RGB color space.
   CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 
   if (colorSpace == NULL) {
@@ -67,7 +68,7 @@ static CIContext *gCIContext;
     return nil;
   }
 
-  // TODO: Adds more support for other formats.
+  // TODO: Add more support for other formats.
   CGContextRef context =
       CGBitmapContextCreate(baseAddress, width, height, bitPerComponent, bytesPerRow, colorSpace,
                             kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);

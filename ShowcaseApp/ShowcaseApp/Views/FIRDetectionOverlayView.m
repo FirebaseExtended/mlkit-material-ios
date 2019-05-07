@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -98,22 +98,22 @@ NS_ASSUME_NONNULL_BEGIN
       [UIColor.blackColor colorWithAlphaComponent:kImageBackgroundAlpha].CGColor;
 }
 
-- (void)clear {
-  [self clearBox];
-  [self clearImage];
+- (void)hideSubviews {
+  [self hideBox];
+  [self hideImage];
 }
 
 #pragma mark - Private
 
-/** Clears box in the view. */
-- (void)clearBox {
+/** Hides box in the view. */
+- (void)hideBox {
   self.layer.mask = nil;
   [self.boxMaskLayer setHidden:YES];
   [self.boxLayer setHidden:YES];
 }
 
-/** Clears image in the view. */
-- (void)clearImage {
+/** Hides image in the view. */
+- (void)hideImage {
   [self.image setHidden:YES];
   self.layer.backgroundColor = nil;
 }

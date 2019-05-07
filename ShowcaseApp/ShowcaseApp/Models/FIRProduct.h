@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 /** Model for a product search results. */
 @interface FIRProduct : NSObject
 
-@property(nonatomic, nullable) NSString *productName;
+@property(nonatomic, copy, nullable) NSString *productName;
 @property(nonatomic, nullable) NSNumber *score;
-@property(nonatomic) NSString *itemNumber;
-@property(nonatomic, nullable) NSString *imageURL;
-@property(nonatomic, nullable) NSString *priceFullText;
-@property(nonatomic, nullable) NSString *productTypeName;
+@property(nonatomic, copy, nullable) NSString *itemNumber;
+@property(nonatomic, copy, nullable) NSString *imageURL;
+@property(nonatomic, copy, nullable) NSString *priceFullText;
+@property(nonatomic, copy, nullable) NSString *productTypeName;
 
 /**
  * Generates a list of products from given search response.

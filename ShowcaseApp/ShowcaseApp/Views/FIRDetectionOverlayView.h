@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,23 +25,23 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) UIImageView *image;
 
 /**
- * Shows a box in given rect. It also shows a scrim background outside of the box area.
+ * Shows a box in the given rect. It also shows a scrim background outside of the box area.
  *
  * @param rect The given area of the box.
  */
 - (void)showBoxInRect:(CGRect)rect;
 
 /**
- * Shows image in given area of given alpha. It also shows a border around the image as well as a
- * dark background.
+ * Shows image in the given area of given alpha. It also shows a border around the image as well as
+ * a dark background.
  *
- * @param rect The rect of frame of the image.
+ * @param rect The frame of the image.
  * @param alpha The alpha value of the image view.
  */
 - (void)showImageInRect:(CGRect)rect alpha:(CGFloat)alpha;
 
 /** Clears all elements in the view. */
-- (void)clear;
+- (void)hideSubviews;
 
 @end
 

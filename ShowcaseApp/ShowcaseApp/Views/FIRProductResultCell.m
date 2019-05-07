@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +18,8 @@
 
 #import "FIRProduct.h"
 
-// Use the following imports for CocoaPods:
 @import MaterialComponents;
 @import PINRemoteImage;
-
-// Use the following imports for google3:
-//#import
-//"googlemac/iPhone/Shared/GoogleMaterial/components/FontScheme/src/GoogleMaterialFontScheme.h"
-//#import "googlemac/iPhone/Shared/GoogleMaterial/components/Palettes/src/GoogleMaterialPalettes.h"
 
 /** Layout values. */
 static CGFloat const kHorizontalPadding = 16.0f;
@@ -42,8 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self != nil) {
-    _thumbNailImage = [[UIImageView alloc] init];
-    [self addSubview:_thumbNailImage];
+    _thumbnailImage = [[UIImageView alloc] init];
+    [self addSubview:_thumbnailImage];
 
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.numberOfLines = 0;
@@ -69,12 +63,13 @@ NS_ASSUME_NONNULL_BEGIN
   return self;
 }
 
-- (BOOL)populateFromProductModel:(FIRProduct *)product {
+- (BOOL)isCellPopulatedWithProduct:(nullable FIRProduct *)product {
   if (product == nil) {
     return NO;
   }
-
-  [self.thumbNailImage pin_setImageFromURL:[NSURL URLWithString:product.imageURL]];
+  if (product.imageURL.length > 0) {
+    [self.thumbnailImage pin_setImageFromURL:[NSURL URLWithString:product.imageURL]];
+  }
   self.nameLabel.text = product.productName;
   self.categoryLabel.text = product.productTypeName;
   self.priceLabel.text = product.priceFullText;
@@ -86,11 +81,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)prepareForReuse {
   [super prepareForReuse];
-  self.thumbNailImage.image = nil;
-  self.nameLabel.text = @"";
-  self.priceLabel.text = @"";
-  self.categoryLabel.text = @"";
-  self.itemNumberLabel.text = @"";
+  self.thumbnailImage.image = nil;
+  self.nameLabel.text = nil;
+  self.priceLabel.text = nil;
+  self.categoryLabel.text = nil;
+  self.itemNumberLabel.text = nil;
 }
 
 #pragma mark - UIView
@@ -124,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
   CGFloat startX = kHorizontalPadding;
 
   if (shouldSetFrame) {
-    self.thumbNailImage.frame = CGRectMake(startX, currentHeight, kThumbnailSize, kThumbnailSize);
+    self.thumbnailImage.frame = CGRectMake(startX, currentHeight, kThumbnailSize, kThumbnailSize);
   }
 
   startX += kThumbnailSize + kHorizontalPadding;

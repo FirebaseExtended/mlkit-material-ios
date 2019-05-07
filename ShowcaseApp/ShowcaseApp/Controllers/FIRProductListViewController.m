@@ -1,4 +1,5 @@
-/* Copyright 2019 Google LLC
+/**
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +19,11 @@
 #import "FIRProductListHeaderView.h"
 #import "FIRProductResultCell.h"
 
-// Use the following imports for CocoaPods:
 @import MaterialComponents;
 
-// Use the following imports for google3:
-//#import
-//"third_party/objective_c/material_components_ios/components/FlexibleHeader/src/"
-//"MaterialFlexibleHeader.h"
+NS_ASSUME_NONNULL_BEGIN
 
 static NSString *const kProductCellReuseIdentifier = @"ProductCell";
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface FIRProductListViewController ()
 
@@ -92,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
   FIRProductResultCell *cell =
       [collectionView dequeueReusableCellWithReuseIdentifier:kProductCellReuseIdentifier
                                                 forIndexPath:indexPath];
-  [cell populateFromProductModel:self.products[indexPath.row]];
+  [cell isCellPopulatedWithProduct:self.products[indexPath.row]];
   [cell setNeedsLayout];
   return cell;
 }
@@ -100,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGSize)collectionView:(UICollectionView *)collectionView
                     layout:(nonnull UICollectionViewLayout *)collectionViewLayout
     sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-  [self.measureCell populateFromProductModel:self.products[indexPath.row]];
+  [self.measureCell isCellPopulatedWithProduct:self.products[indexPath.row]];
   CGFloat contentWidth = self.view.frame.size.width - self.collectionView.contentInset.left -
                          self.collectionView.contentInset.right;
   return CGSizeMake(contentWidth,

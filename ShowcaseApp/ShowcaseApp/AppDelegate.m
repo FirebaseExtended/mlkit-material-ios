@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +18,7 @@
 
 #import "FIRVideoCamViewController.h"
 
-// Use the following imports for CocoaPods:
 @import FirebaseCore;
-
-// Use the following imports for google3:
-//#import
-//"googlemac/iPhone/FirebaseML/SampleApps/ObjC/FIRShowcase/ShowcaseApp/ShowcaseApp/Controllers/"
-//"FIRVideoCamViewController.h"
-//#import "third_party/firebase/ios/Releases/FirebaseCore/Library/FIRApp.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

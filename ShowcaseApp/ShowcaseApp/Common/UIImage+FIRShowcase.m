@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +18,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static const CGFloat kJPEGCompressionQuality = 1.0f;
+static const CGFloat kJPEGCompressionQuality = 0.7f;
 
 @implementation UIImage (FIRShowcase)
 
-#pragma mark - UIImage (FIRShowcase)
-
 - (nullable NSString *)fir_base64EncodedString {
   NSData *jpegEncoding = UIImageJPEGRepresentation(self, kJPEGCompressionQuality);
-  if (jpegEncoding == nil) {
-    return nil;
-  }
   return [jpegEncoding base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 }
 

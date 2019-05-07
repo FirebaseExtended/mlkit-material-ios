@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation FIRProduct
 
 + (nullable NSArray<FIRProduct *> *)productsFromResponse:(nullable NSData *)response {
+  if (response == nil) {
+    return nil;
+  }
   NSError *JSONError;
   NSDictionary *responseJSONObject = [NSJSONSerialization JSONObjectWithData:response
                                                                      options:0
@@ -44,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
   }
 
   NSData *responseData = [responseJSONObject valueForKey:kSearchResponseKeyData];
-  if (responseData == nil || ![responseData isKindOfClass:NSDictionary.class]) {
+  if (responseData == nil || ![responseData isKindOfClass:[NSDictionary class]]) {
     return nil;
   }
   NSDictionary *responseDataDictionary = (NSDictionary *)responseData;
@@ -53,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
       [responseDataDictionary valueForKey:kSearchResponseKeySearchResults];
 
   if (productSearchResultsData == nil ||
-      ![productSearchResultsData isKindOfClass:NSDictionary.class]) {
+      ![productSearchResultsData isKindOfClass:[NSDictionary class]]) {
     return nil;
   }
 
@@ -63,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
   for (NSData *resultData in productSearchResultsArray) {
     [results addObject:[self productFromData:resultData]];
   }
-  return [results copy];
+  return results;
 }
 
 - (NSString *)description {

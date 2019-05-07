@@ -1,4 +1,3 @@
-source 'sso://cpdc-internal/firebase.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
@@ -9,7 +8,7 @@ pod 'FirebaseMLCommon'
 pod 'FirebaseMLVision'
 pod 'FirebaseMLVisionObjectDetection'
 
-pod 'MaterialComponents', :git => 'https://github.com/material-components/material-components-ios.git', :branch => 'develop'
+pod 'MaterialComponents'
 pod 'PINRemoteImage'
 
 target 'ShowcaseApp' do

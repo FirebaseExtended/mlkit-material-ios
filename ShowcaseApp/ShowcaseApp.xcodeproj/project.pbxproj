@@ -17,7 +17,6 @@
 		AA10D303226F745E0057608A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA10D302226F745E0057608A /* AppDelegate.m */; };
 		AA10D311226F74610057608A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA10D310226F74610057608A /* main.m */; };
 		AA10D33D226F7C930057608A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA10D33B226F7C930057608A /* LaunchScreen.xib */; };
-		AA10D33F226F7D0D0057608A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA10D33E226F7D0C0057608A /* GoogleService-Info.plist */; };
 		AA10D341226F7D260057608A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA10D340226F7D260057608A /* Images.xcassets */; };
 		AA10D353226F7F880057608A /* FIRVideoCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA10D344226F7F860057608A /* FIRVideoCamViewController.m */; };
 		AA10D354226F7F880057608A /* FIRCameraReticle.m in Sources */ = {isa = PBXBuildFile; fileRef = AA10D347226F7F870057608A /* FIRCameraReticle.m */; };
@@ -48,7 +47,6 @@
 		AA10D30F226F74610057608A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA10D310226F74610057608A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA10D33C226F7C930057608A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AA10D33E226F7D0C0057608A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA10D340226F7D260057608A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA10D343226F7F860057608A /* FIRVideoCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRVideoCamViewController.h; sourceTree = "<group>"; };
 		AA10D344226F7F860057608A /* FIRVideoCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRVideoCamViewController.m; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 		AA10D2F5226F745E0057608A = {
 			isa = PBXGroup;
 			children = (
-				AA10D33E226F7D0C0057608A /* GoogleService-Info.plist */,
 				AA10D300226F745E0057608A /* ShowcaseApp */,
 				AA10D2FF226F745E0057608A /* Products */,
 			);
@@ -219,7 +216,6 @@
 			files = (
 				AA10D33D226F7C930057608A /* LaunchScreen.xib in Resources */,
 				AA10D341226F7D260057608A /* Images.xcassets in Resources */,
-				AA10D33F226F7D0D0057608A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

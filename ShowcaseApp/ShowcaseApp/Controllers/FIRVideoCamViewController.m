@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,26 +29,11 @@
 #import "FIRProductSearchRequest.h"
 #import "FIRUIUtilities.h"
 
-// Use the following imports for CocoaPods:
 @import FirebaseMLCommon;
 @import FirebaseMLVision;
 @import FirebaseMLVisionObjectDetection;
 @import MaterialComponents;
 @import GTMSessionFetcher;
-
-// Use the following imports for google3:
-//#import "googlemac/iPhone/FirebaseML/Vision/ObjectDetection/Public/FIRVision+ObjectDetection.h"
-//#import "googlemac/iPhone/FirebaseML/Vision/ObjectDetection/Public/FIRVisionObject.h"
-//#import "googlemac/iPhone/FirebaseML/Vision/ObjectDetection/Public/FIRVisionObjectDetector.h"
-//#import
-//"googlemac/iPhone/FirebaseML/Vision/ObjectDetection/Public/FIRVisionObjectDetectorOptions.h"
-//#import "googlemac/iPhone/FirebaseML/Vision/Public/FIRVision.h"
-//#import "googlemac/iPhone/FirebaseML/Vision/Public/FIRVisionImage.h"
-//#import "googlemac/iPhone/FirebaseML/Vision/Public/FIRVisionImageMetadata.h"
-//#import "googlemac/iPhone/FirebaseML/Vision/Public/FIRVisionPoint.h"
-//#import "googlemac/iPhone/Shared/GoogleMaterial/components/Buttons/src/GoogleMaterialButtons.h"
-//#import "googlemac/iPhone/Shared/GoogleMaterial/components/Palettes/src/GoogleMaterialPalettes.h"
-//#import "third_party/objective_c/material_components_ios/components/Chips/src/MaterialChips.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -137,8 +122,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
 @end
 
 @interface FIRVideoCamViewController () <AVCaptureVideoDataOutputSampleBufferDelegate,
-                                         MDCBottomSheetControllerDelegate,
-                                         MDCFlexibleHeaderViewDelegate>
+                                         MDCBottomSheetControllerDelegate>
 
 // Views to be added as subviews of current view.
 @property(nonatomic) UIView *previewView;
@@ -280,10 +264,11 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
                  kThumbnailbottomSheetTargetHeight);                                  // Height
 
   UIWindow *currentWindow = UIApplication.sharedApplication.keyWindow;
-  UIEdgeInsets safeInset = currentWindow.safeAreaInsets;
+
+  UIEdgeInsets safeInsets = [FIRUIUtilities safeAreaInsets];
   CGFloat screenHeight = currentWindow.bounds.size.height;
-  CGFloat topFadeOutOffsetY = safeInset.top + kThumbnailFadeOutEdgeThreshhold;
-  CGFloat bottomFadeOutOffsetY = screenHeight - safeInset.bottom - kThumbnailFadeOutEdgeThreshhold;
+  CGFloat topFadeOutOffsetY = safeInsets.top + kThumbnailFadeOutEdgeThreshhold;
+  CGFloat bottomFadeOutOffsetY = screenHeight - safeInsets.bottom - kThumbnailFadeOutEdgeThreshhold;
 
   CGFloat imageAlpha =
       [self ratioOfCurrentValue:yOffset
@@ -299,7 +284,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
 - (void)setUpVideoProcessing {
   __weak typeof(self) weakSelf = self;
   dispatch_async(self.sessionQueue, ^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     if (strongSelf == nil) {
       return;
     }
@@ -345,7 +330,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
 - (void)setCameraSelection {
   __weak typeof(self) weakSelf = self;
   dispatch_async(self.sessionQueue, ^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     if (strongSelf == nil) {
       return;
     }
@@ -406,7 +391,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   NSAssert([NSThread.currentThread isEqual:NSThread.mainThread],
            @"cleanUpOverlayView is not running on the main thread");
 
-  [self.overlayView clear];
+  [self.overlayView hideSubviews];
   self.overlayView.frame = self.view.frame;
 }
 
@@ -483,7 +468,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
 #pragma mark - Object detection and tracking.
 
 /**
- * Called to detect objects in given sample buffer.
+ * Called to detect objects in the given sample buffer.
  *
  * @param sampleBuffer The `SampleBuffer` for object detection.
  */
@@ -510,17 +495,16 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   if (error == nil) {
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-      __strong typeof(self) strongSelf = weakSelf;
-      [strongSelf onDetectedObjects:objects inSampleBuffer:sampleBuffer];
+      [weakSelf onDetectedObjects:objects inSampleBuffer:sampleBuffer];
     });
   }
 }
 
 /**
- * Call when objects are detected in given sample buffer. Caller must make sure that this method
+ * Call when objects are detected in the given sample buffer. Caller must make sure that this method
  * runs on the main thread.
  *
- * @param objects The list of objects that is detected in given sample buffer.
+ * @param objects The list of objects that is detected in the given sample buffer.
  * @param sampleBuffer The given sampleBuffer.
  */
 - (void)onDetectedObjects:(nullable NSArray<FIRVisionObject *> *)objects
@@ -540,10 +524,9 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   }
 
   CGSize sampleBufferSize = [self sampleBufferSize:sampleBuffer.data];
-  BOOL isOutOfBox =
-      [self isPoint:CGPointMake(sampleBufferSize.width / 2, sampleBufferSize.height / 2)
-          outOfRectArea:object.frame];
-  if (isOutOfBox) {
+  BOOL isFocusInsideObjectFrame = CGRectContainsPoint(
+      object.frame, CGPointMake(sampleBufferSize.width / 2, sampleBufferSize.height / 2));
+  if (!isFocusInsideObjectFrame) {
     [self startToDetect];
     return;
   }
@@ -565,11 +548,10 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
       self.lastDetectedSampleBuffer = sampleBuffer;
       break;
     }
-    case FIRODTStatus_Searching:  // Falls through
-    case FIRODTStatus_Searched:   // Falls through
-    case FIRODTStatus_NotStarted: {
+    case FIRODTStatus_Searching:
+    case FIRODTStatus_Searched:
+    case FIRODTStatus_NotStarted:
       break;
-    }
   }
 }
 
@@ -588,7 +570,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   [self clearLastDetectedObject];
   __weak typeof(self) weakSelf = self;
   dispatch_async(self.sessionQueue, ^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     if (strongSelf == nil) {
       return;
     }
@@ -626,18 +608,18 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   FIRProductSearchRequest *request = [[FIRProductSearchRequest alloc] initWithUIImage:croppedImage];
   GTMSessionFetcher *fetcher = [self.fetcherService fetcherWithRequest:request];
   if (request.URL.absoluteString.length == 0) {
-    [self onSearchResponse:nil
-                  forImage:croppedImage
-             originalWidth:originalSampleBufferSize.width
-            originalHeight:originalSampleBufferSize.height
-           useFakeResponse:YES];
+    [self processSearchResponse:nil
+                       forImage:croppedImage
+                  originalWidth:originalSampleBufferSize.width
+                 originalHeight:originalSampleBufferSize.height
+                useFakeResponse:YES];
     [self clearLastDetectedObject];
     return;
   }
   __weak typeof(self) weakSelf = self;
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
     [fetcher beginFetchWithCompletionHandler:^(NSData *_Nullable data, NSError *_Nullable error) {
-      __strong typeof(self) strongSelf = weakSelf;
+      __strong typeof(weakSelf) strongSelf = weakSelf;
       if (strongSelf == nil) {
         return;
       }
@@ -646,26 +628,25 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
         [strongSelf clearLastDetectedObject];
         return;
       }
-      __weak typeof(self) weakSelfInMainThrad = strongSelf;
       dispatch_async(dispatch_get_main_queue(), ^{
-        __strong typeof(self) strongSelfInMainThread = weakSelfInMainThrad;
-        if (strongSelfInMainThread == nil) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf == nil) {
           return;
         }
-        [strongSelfInMainThread onSearchResponse:data
-                                        forImage:croppedImage
-                                   originalWidth:originalSampleBufferSize.width
-                                  originalHeight:originalSampleBufferSize.height
-                                 useFakeResponse:NO];
-        [strongSelfInMainThread clearLastDetectedObject];
+        [strongSelf processSearchResponse:data
+                                 forImage:croppedImage
+                            originalWidth:originalSampleBufferSize.width
+                           originalHeight:originalSampleBufferSize.height
+                          useFakeResponse:NO];
+        [strongSelf clearLastDetectedObject];
       });
     }];
   });
 }
 
 /**
- * Called when search response is returned from server. Caller must make sure that this method runs
- * on the main thread.
+ * Processes search response from server. Caller must make sure that this method runs on the main
+ * thread.
  *
  * @param response The raw response from server on product search request.
  * @param image The image of the detected object that is to be searched.
@@ -674,14 +655,14 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
  * @param useFakeResponse Whether to use fake response or send a product search request to the
  * server.
  */
-- (void)onSearchResponse:(nullable NSData *)response
-                forImage:(UIImage *)image
-           originalWidth:(size_t)width
-          originalHeight:(size_t)height
-         useFakeResponse:(BOOL)useFakeResponse {
-  NSAssert(
-      [NSThread.currentThread isEqual:NSThread.mainThread],
-      @"onSearchResponse:forImage:originalWidth:originalHeight is not running on the main thread");
+- (void)processSearchResponse:(nullable NSData *)response
+                     forImage:(UIImage *)image
+                originalWidth:(size_t)width
+               originalHeight:(size_t)height
+              useFakeResponse:(BOOL)useFakeResponse {
+  NSAssert([NSThread.currentThread isEqual:NSThread.mainThread],
+           @"processSearchRespose:forImage:originalWidth:originalHeight is not running on the main "
+           @"thread");
   self.status = FIRODTStatus_Searched;
   NSArray<FIRProduct *> *products;
   if (useFakeResponse) {
@@ -705,11 +686,11 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
       productsViewController.collectionViewLayout.collectionViewContentSize.height;
   CGFloat screenHeight = self.view.frame.size.height;
 
-  UIEdgeInsets safeInset = UIApplication.sharedApplication.keyWindow.safeAreaInsets;
+  UIEdgeInsets safeInsets = [FIRUIUtilities safeAreaInsets];
 
   CGFloat toOffsetY = contentHeight > screenHeight
-                          ? screenHeight / 2.0f - safeInset.bottom
-                          : screenHeight - contentHeight - safeInset.top - safeInset.bottom;
+                          ? screenHeight / 2.0f - safeInsets.bottom
+                          : screenHeight - contentHeight - safeInsets.top - safeInsets.bottom;
   self.bottomSheetTargetHeight = toOffsetY;
 
   CGRect toFrame =
@@ -768,28 +749,25 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
 - (void)onTimerFired {
   __weak typeof(self) weakSelf = self;
   dispatch_async(dispatch_get_main_queue(), ^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     if (strongSelf == nil) {
       return;
     }
     switch (strongSelf.status) {
       case FIRODTStatus_Confirming: {
 #if !TARGET_IPHONE_SIMULATOR
-        __weak typeof(self) weakSelfInSessionQueue = strongSelf;
         dispatch_async(strongSelf.sessionQueue, ^{
-          __strong typeof(self) strongSelfInSessionQueue = weakSelfInSessionQueue;
-          [strongSelfInSessionQueue.session stopRunning];
+          [weakSelf.session stopRunning];
         });
 #endif
         [strongSelf startToSearch];
         break;
       }
-      case FIRODTStatus_Detecting:   // Falls through
-      case FIRODTStatus_NotStarted:  // Falls through
-      case FIRODTStatus_Searched:    // Falls through
-      case FIRODTStatus_Searching: {
+      case FIRODTStatus_Detecting:
+      case FIRODTStatus_NotStarted:
+      case FIRODTStatus_Searched:
+      case FIRODTStatus_Searching:
         break;
-      }
     }
   });
 }
@@ -810,6 +788,13 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   _status = status;
 
   switch (status) {
+    case FIRODTStatus_NotStarted: {
+      [self hideMessage];
+      [self.confirmingSpinner setHidden:YES];
+      [self.detectingReticle setHidden:YES];
+      [self showSearchingIndicator:NO];
+      break;
+    }
     case FIRODTStatus_Detecting: {
       [self showMessage:kDetectingStageMessage];
       [self.detectingReticle setHidden:NO];
@@ -838,13 +823,6 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
       [self showSearchingIndicator:NO];
       break;
     }
-    default: {
-      [self hideMessage];
-      [self.confirmingSpinner setHidden:YES];
-      [self.detectingReticle setHidden:YES];
-      [self showSearchingIndicator:NO];
-      break;
-    }
   }
 }
 
@@ -861,36 +839,6 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   size_t imageWidth = CVPixelBufferGetWidth(imageBuffer);
   size_t imageHeight = CVPixelBufferGetHeight(imageBuffer);
   return CGSizeMake(imageWidth, imageHeight);
-}
-
-/**
- * Whether the given point is outside of the given rect area.
- *
- * @param point The given point.
- * @param rect Rect of the given area.
- * @return YES if the point is out of given rect area,otherwise, NO.
- */
-- (BOOL)isPoint:(CGPoint)point outOfRectArea:(CGRect)rect {
-  size_t pointX = point.x;
-  size_t pointY = point.y;
-  size_t minX = rect.origin.x;
-  size_t maxX = rect.origin.x + rect.size.width;
-  size_t minY = rect.origin.y;
-  size_t maxY = rect.origin.y + rect.size.height;
-
-  if (minX > pointX && maxX > pointX) {
-    return YES;
-  }
-  if (minX < pointX && maxX < pointX) {
-    return YES;
-  }
-  if (minY > pointY && maxY > pointY) {
-    return YES;
-  }
-  if (minY < pointY && maxY < pointY) {
-    return YES;
-  }
-  return NO;
 }
 
 /**
@@ -920,7 +868,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   CMSampleBufferRef croppedSampleBuffer = [FIRImageUtilities croppedSampleBuffer:sampleBuffer
                                                                         withRect:rect];
   UIImage *croppedImage = [FIRImageUtilities imageFromSampleBuffer:croppedSampleBuffer];
-  return [FIRUIUtilities adjustOrientationForCameraImage:croppedImage];
+  return [FIRUIUtilities orientedUpImageFromImage:croppedImage];
 }
 
 /**
@@ -980,7 +928,9 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
                    }];
 }
 
-// Generates fake product search results for demo when there are no real backend server hooked up.
+/**
+ * Generates fake product search results for demo when there are no real backend server hooked up.
+ */
 - (NSArray<FIRProduct *> *)fakeProductSearchResults {
   NSMutableArray<FIRProduct *> *fakeProductSearchResults = [NSMutableArray array];
   for (NSInteger index = 0; index < kFakeProductSearchResultCount; index++) {
@@ -991,7 +941,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
     product.itemNumber = kFakeProductItemNumberText;
     [fakeProductSearchResults addObject:product];
   }
-  return [fakeProductSearchResults copy];
+  return fakeProductSearchResults;
 }
 
 @end

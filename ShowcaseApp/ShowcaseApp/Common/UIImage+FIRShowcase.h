@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (FIRShowcase)
 
 /**
- * Base 64 encoded string for `UIImage`.
+ * Returns a base 64 encoded string for `UIImage`.
  *
  * @return Returns the base 64 encoded string for `UIImage` or `nil` if its JPEG representation is
  *     `nil`.

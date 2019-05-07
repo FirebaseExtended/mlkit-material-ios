@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,12 +19,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Object detection statuses. */
-typedef NS_ENUM(NSUInteger, FIRODTStatus) {
-  FIRODTStatus_NotStarted,  // Object detection hasn't stared yet.
-  FIRODTStatus_Detecting,   // Object detection started detecting on new objects.
-  FIRODTStatus_Confirming,  // Object detection is confirming on the same object.
-  FIRODTStatus_Searching,   // Object detection is searching the detected object.
-  FIRODTStatus_Searched,    // Object detection has got search results on detected object.
+typedef NS_ENUM(NSInteger, FIRODTStatus) {
+  /** Object detection hasn't started yet. */
+  FIRODTStatus_NotStarted,
+  /** Object detection started detecting on new objects. */
+  FIRODTStatus_Detecting,
+  /** Object detection is confirming on the same object. */
+  FIRODTStatus_Confirming,
+  /** Object detection is searching the detected object. */
+  FIRODTStatus_Searching,
+  /** Object detection has got search results on detected object. */
+  FIRODTStatus_Searched,
 };
 
 NS_ASSUME_NONNULL_END

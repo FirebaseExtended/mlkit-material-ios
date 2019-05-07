@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,10 +18,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** Header view for product search result list view. */
+/** Header view for product search results list view. */
 @interface FIRProductListHeaderView : UIView
 
-/** Labels that shows search result number. */
+/** Labels that shows search results number. */
 @property(nonatomic) UILabel *resultLabel;
 
 /** Minimum header height for the given width. */

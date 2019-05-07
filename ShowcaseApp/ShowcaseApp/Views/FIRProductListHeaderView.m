@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,13 @@
 
 #import "FIRProductListHeaderView.h"
 
-// Use the following imports for CocoaPods:
 @import MaterialComponents;
 
-// Use the following imports for google3:
-//#import
-//"googlemac/iPhone/Shared/GoogleMaterial/components/FontScheme/src/GoogleMaterialFontScheme.h"
+NS_ASSUME_NONNULL_BEGIN
 
 /** Layout constants. */
 static CGFloat const kHorizontalPadding = 16;
 static CGFloat const kVerticalPadding = 16;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @implementation FIRProductListHeaderView
 

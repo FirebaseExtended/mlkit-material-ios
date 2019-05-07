@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,22 +16,17 @@
 
 #import <UIKit/UIKit.h>
 
-// Use the following imports for CocoaPods:
 @import MaterialComponents;
-
-// Use the following imports for google3:
-//#import
-//"third_party/objective_c/material_components_ios/components/Collections/src/MaterialCollections.h"
 
 @class FIRProduct;
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** Cell that shows `Product` detail in a search result. */
+/** Cell that shows `Product` details from a search result. */
 @interface FIRProductResultCell : MDCBaseCell
 
 /** Thumbnail of the product. */
-@property(nonatomic, readonly) UIImageView *thumbNailImage;
+@property(nonatomic, readonly) UIImageView *thumbnailImage;
 
 /** Label showing the name of the product. */
 @property(nonatomic, readonly) UILabel *nameLabel;
@@ -45,8 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 /** Label showing the price of the product. */
 @property(nonatomic, readonly) UILabel *priceLabel;
 
-/** Populates the content of the cell with a `Product` model. */
-- (BOOL)populateFromProductModel:(FIRProduct *)product;
+/**
+ * Populates the content of the cell with a `Product` model.
+ *
+ * @param product The product info to populate the cell with.
+ * @return YES if product is not nil, otherwise, NO.
+ */
+- (BOOL)isCellPopulatedWithProduct:(nullable FIRProduct *)product;
 
 @end
 

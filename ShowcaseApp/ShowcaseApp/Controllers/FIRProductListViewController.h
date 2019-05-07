@@ -1,4 +1,5 @@
-/* Copyright 2019 Google LLC
+/**
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +14,13 @@
  * limitations under the License.
  */
 
-// Use the following imports for CocoaPods:
-@import MaterialComponents;
-
-// Use the following imports for google3:
-//#import
-//"third_party/objective_c/material_components_ios/components/Collections/src/MaterialCollections.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import <UIKit/UIKit.h>
 
 @class FIRProduct;
 @class FIRProductListHeaderView;
 @class MDCFlexibleHeaderViewController;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /** View controller showing a list of products. */
 @interface FIRProductListViewController : UICollectionViewController

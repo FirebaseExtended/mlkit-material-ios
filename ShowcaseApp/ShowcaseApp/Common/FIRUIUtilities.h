@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-// Use the following imports for CocoaPods:
 @import FirebaseMLVision;
-
-// Use the following imports for google3:
-//#import "googlemac/iPhone/FirebaseML/Vision/Public/FIRVisionImageMetadata.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,14 +36,15 @@ NS_ASSUME_NONNULL_BEGIN
           withCaptureDevicePosition:(AVCaptureDevicePosition)position;
 
 /**
- * Fixes orientation for given camera image basing on current device orientation. Raw
- * images captured from camera might come rotated, this utility fixes the orientation
- * and returns an upright image.
+ * Rotates the given image, based on the current device orientation, so its orientation is `.up`.
  *
  * @param image The image that comes from camera.
  * @return Image with orientation adjusted to upright.
  */
-+ (UIImage *)adjustOrientationForCameraImage:(UIImage *)image;
++ (UIImage *)orientedUpImageFromImage:(UIImage *)image;
+
+/** Returns safe area insets of the view. */
++ (UIEdgeInsets)safeAreaInsets;
 
 @end
 

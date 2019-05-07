@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +20,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-// Use the following imports for CocoaPods:
 @import FirebaseMLVision;
-
-// Use the following imports for google3:
-//#import "googlemac/iPhone/FirebaseML/Vision/Public/FIRVisionImageMetadata.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -104,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
     return currentOrientation;
 }
 
-+ (UIImage *)adjustOrientationForCameraImage:(UIImage *)image {
++ (UIImage *)orientedUpImageFromImage:(UIImage *)image {
   FIRVisionDetectorImageOrientation orientation =
       [FIRUIUtilities imageOrientationFromOrientation:UIDevice.currentDevice.orientation
                             withCaptureDevicePosition:AVCaptureDevicePositionBack];
@@ -122,12 +118,12 @@ NS_ASSUME_NONNULL_BEGIN
       transform = CGAffineTransformTranslate(transform, 0, image.size.height);
       transform = CGAffineTransformRotate(transform, -M_PI_2);
       break;
-    case FIRVisionDetectorImageOrientationTopLeft:      // Falls through
-    case FIRVisionDetectorImageOrientationTopRight:     // Falls through
-    case FIRVisionDetectorImageOrientationBottomRight:  // Falls through
-    case FIRVisionDetectorImageOrientationBottomLeft:   // Falls through
-    case FIRVisionDetectorImageOrientationLeftTop:      // Falls through
-    case FIRVisionDetectorImageOrientationRightBottom:  // Falls through
+    case FIRVisionDetectorImageOrientationTopLeft:
+    case FIRVisionDetectorImageOrientationTopRight:
+    case FIRVisionDetectorImageOrientationBottomRight:
+    case FIRVisionDetectorImageOrientationBottomLeft:
+    case FIRVisionDetectorImageOrientationLeftTop:
+    case FIRVisionDetectorImageOrientationRightBottom:
     case FIRVisionDetectorImageOrientationLeftBottom:
       // TODO: handle other cases as well.
       break;
@@ -142,13 +138,13 @@ NS_ASSUME_NONNULL_BEGIN
     case FIRVisionDetectorImageOrientationRightTop:
       CGContextDrawImage(ctx, CGRectMake(0, 0, image.size.height, image.size.width), image.CGImage);
       break;
-    case FIRVisionDetectorImageOrientationTopLeft:      // Falls through
-    case FIRVisionDetectorImageOrientationTopRight:     // Falls through
-    case FIRVisionDetectorImageOrientationBottomRight:  // Falls through
-    case FIRVisionDetectorImageOrientationBottomLeft:   // Falls through
-    case FIRVisionDetectorImageOrientationLeftTop:      // Falls through
-    case FIRVisionDetectorImageOrientationRightBottom:  // Falls through
-    FIRVisionDetectorImageOrientationLeftBottom:
+    case FIRVisionDetectorImageOrientationTopLeft:
+    case FIRVisionDetectorImageOrientationTopRight:
+    case FIRVisionDetectorImageOrientationBottomRight:
+    case FIRVisionDetectorImageOrientationBottomLeft:
+    case FIRVisionDetectorImageOrientationLeftTop:
+    case FIRVisionDetectorImageOrientationRightBottom:
+    case FIRVisionDetectorImageOrientationLeftBottom:
       // TODO: handle other cases as well.
       break;
   }
@@ -159,6 +155,16 @@ NS_ASSUME_NONNULL_BEGIN
   CGContextRelease(ctx);
   CGImageRelease(cgImage);
   return uiImage;
+}
+
++ (UIEdgeInsets)safeAreaInsets {
+#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
+  if (@available(iOS 11.0, *)) {
+    return UIApplication.sharedApplication.keyWindow.safeAreaInsets;
+  }
+#endif  // defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
+  CGRect statusBarFrame = UIApplication.sharedApplication.statusBarFrame;
+  return UIEdgeInsetsMake(MIN(statusBarFrame.size.width, statusBarFrame.size.height), 0, 0, 0);
 }
 
 @end

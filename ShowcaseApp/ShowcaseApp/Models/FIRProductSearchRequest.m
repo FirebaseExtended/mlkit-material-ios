@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ static NSString *const kKeyFileType = @"plist";
 @interface FIRProductSearchRequest ()
 
 /** Product search backend server information. */
-@property(nonatomic) NSDictionary *serverInfo;
+@property(nonatomic) NSDictionary<NSString *, NSString *> *serverInfo;
 
 @end
 
@@ -98,7 +98,7 @@ static NSString *const kKeyFileType = @"plist";
   return self.serverInfo[kHeaderAcceptTypeKey];
 }
 
-/** Product search server information. */
+/** Overrides getter of `serverInfo`. */
 - (NSDictionary *)serverInfo {
   if (_serverInfo == nil) {
     NSString *serverInfoFileName = [NSBundle.mainBundle pathForResource:kKeyFileName

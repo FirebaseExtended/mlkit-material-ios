@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Google LLC
+ * Copyright 2019 Google ML Kit team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -187,7 +187,7 @@ static NSString *const kLineWidthKeyPath = @"lineWidth";
   [CATransaction begin];
   __weak typeof(self) weakSelf = self;
   [CATransaction setCompletionBlock:^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     [strongSelf expandRippleRing];
   }];
   CABasicAnimation *fadeIn = [[CABasicAnimation alloc] init];
@@ -207,7 +207,7 @@ static NSString *const kLineWidthKeyPath = @"lineWidth";
   [CATransaction begin];
   __weak typeof(self) weakSelf = self;
   [CATransaction setCompletionBlock:^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     [strongSelf hibernate];
   }];
 
@@ -259,7 +259,7 @@ static NSString *const kLineWidthKeyPath = @"lineWidth";
   [CATransaction begin];
   __weak typeof(self) weakSelf = self;
   [CATransaction setCompletionBlock:^{
-    __strong typeof(self) strongSelf = weakSelf;
+    __strong typeof(weakSelf) strongSelf = weakSelf;
     [strongSelf fadeInRippleRing];
   }];
 
