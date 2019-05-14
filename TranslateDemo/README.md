@@ -6,7 +6,7 @@ The goal is to make it as easy as possible to integrate ML Kit into your app wit
 
 * Real-time translate using the on-device Text Recognition, Language ID, Translate APIs - an end-to-end solution from text recognition to translate in live camera.
 
-![live_translate](screenshots/live_translate.gif)
+![live_translate](../screenshots/translate.gif)
 
 
 ## Steps to run the app
