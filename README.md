@@ -26,7 +26,7 @@ directory of the sample you wish to run.
 
 - [Real-time translate using the on-device Text Recognition, Language ID, Translate APIs](TranslateDemo/README.md) - an end-to-end solution from text recognition to translate in live camera.
 
-![live_odt](screenshots/live_odt.gif)
+![live_odt](screenshots/live_odt.gif) ![live_translate](screenshots/translate.gif)
 
 ## How to make contributions?
 Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md)
