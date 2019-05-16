@@ -6,7 +6,7 @@ The goal is to make it as easy as possible to integrate ML Kit into your app wit
 
 * Visual search using the Object Detection & Tracking API - a complete workflow from object detection to product search using a live camera.
 
-![live_odt](screenshots/live_odt.gif)
+![live_odt](../screenshots/live_odt.gif)
 
 
 
