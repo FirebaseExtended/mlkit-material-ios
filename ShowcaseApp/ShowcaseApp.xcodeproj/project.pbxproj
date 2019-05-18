@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1003B0782290603F00C6F6AE /* ShowcaseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003B0772290603F00C6F6AE /* ShowcaseAppTests.swift */; };
 		1B29147C227A54EB009B5E23 /* FIRDetectionOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B29147A227A54EA009B5E23 /* FIRDetectionOverlayView.m */; };
 		1B291481227A54F4009B5E23 /* FIRProductListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B29147D227A54F2009B5E23 /* FIRProductListHeaderView.m */; };
 		1B291482227A54F4009B5E23 /* FIRProductResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B29147E227A54F2009B5E23 /* FIRProductResultCell.m */; };
@@ -25,7 +26,20 @@
 		AA10D35C226F83FE0057608A /* FIRUIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AA10D35B226F83FE0057608A /* FIRUIUtilities.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1003B07A2290603F00C6F6AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA10D2F6226F745E0057608A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA10D2FD226F745E0057608A;
+			remoteInfo = ShowcaseApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1003B0752290603E00C6F6AE /* ShowcaseAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowcaseAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1003B0772290603F00C6F6AE /* ShowcaseAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseAppTests.swift; sourceTree = "<group>"; };
+		1003B0792290603F00C6F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B29147A227A54EA009B5E23 /* FIRDetectionOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRDetectionOverlayView.m; sourceTree = "<group>"; };
 		1B29147B227A54EA009B5E23 /* FIRDetectionOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRDetectionOverlayView.h; sourceTree = "<group>"; };
 		1B29147D227A54F2009B5E23 /* FIRProductListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRProductListHeaderView.m; sourceTree = "<group>"; };
@@ -61,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1003B0722290603E00C6F6AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA10D2FB226F745E0057608A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1003B0762290603E00C6F6AE /* ShowcaseAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1003B0772290603F00C6F6AE /* ShowcaseAppTests.swift */,
+				1003B0792290603F00C6F6AE /* Info.plist */,
+			);
+			path = ShowcaseAppTests;
+			sourceTree = "<group>";
+		};
 		1B291486227A5533009B5E23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AA10D300226F745E0057608A /* ShowcaseApp */,
+				1003B0762290603E00C6F6AE /* ShowcaseAppTests */,
 				AA10D2FF226F745E0057608A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AA10D2FE226F745E0057608A /* ShowcaseApp.app */,
+				1003B0752290603E00C6F6AE /* ShowcaseAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +192,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1003B0742290603E00C6F6AE /* ShowcaseAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1003B07E2290603F00C6F6AE /* Build configuration list for PBXNativeTarget "ShowcaseAppTests" */;
+			buildPhases = (
+				1003B0712290603E00C6F6AE /* Sources */,
+				1003B0722290603E00C6F6AE /* Frameworks */,
+				1003B0732290603E00C6F6AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1003B07B2290603F00C6F6AE /* PBXTargetDependency */,
+			);
+			name = ShowcaseAppTests;
+			productName = ShowcaseAppTests;
+			productReference = 1003B0752290603E00C6F6AE /* ShowcaseAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AA10D2FD226F745E0057608A /* ShowcaseApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA10D314226F74610057608A /* Build configuration list for PBXNativeTarget "ShowcaseApp" */;
@@ -183,9 +233,14 @@
 		AA10D2F6226F745E0057608A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Google Inc";
 				TargetAttributes = {
+					1003B0742290603E00C6F6AE = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = AA10D2FD226F745E0057608A;
+					};
 					AA10D2FD226F745E0057608A = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -205,11 +260,19 @@
 			projectRoot = "";
 			targets = (
 				AA10D2FD226F745E0057608A /* ShowcaseApp */,
+				1003B0742290603E00C6F6AE /* ShowcaseAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1003B0732290603E00C6F6AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA10D2FC226F745E0057608A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +285,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1003B0712290603E00C6F6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1003B0782290603F00C6F6AE /* ShowcaseAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA10D2FA226F745E0057608A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +316,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1003B07B2290603F00C6F6AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA10D2FD226F745E0057608A /* ShowcaseApp */;
+			targetProxy = 1003B07A2290603F00C6F6AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		AA10D33B226F7C930057608A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
@@ -257,6 +336,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1003B07C2290603F00C6F6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShowcaseAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.firebaseml.showcase.ShowcaseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowcaseApp.app/ShowcaseApp";
+			};
+			name = Debug;
+		};
+		1003B07D2290603F00C6F6AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShowcaseAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.firebaseml.showcase.ShowcaseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowcaseApp.app/ShowcaseApp";
+			};
+			name = Release;
+		};
 		AA10D312226F74610057608A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -408,6 +534,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1003B07E2290603F00C6F6AE /* Build configuration list for PBXNativeTarget "ShowcaseAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1003B07C2290603F00C6F6AE /* Debug */,
+				1003B07D2290603F00C6F6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA10D2F9226F745E0057608A /* Build configuration list for PBXProject "ShowcaseApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

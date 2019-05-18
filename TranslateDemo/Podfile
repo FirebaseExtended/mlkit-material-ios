@@ -1,14 +1,10 @@
 platform :ios, '9.0'
 use_frameworks!
-source 'sso://cpdc-test/firebase-ml'
-source 'sso://cpdc-internal/firebase'
-source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'FirebaseCore'
-pod 'FirebaseMLVision'
-pod 'FirebaseMLVisionTextModel'
-pod 'FirebaseMLNLLanguageID'
-pod 'FirebaseMLNLTranslate'
+pod 'Firebase/MLVision'
+pod 'Firebase/MLVisionTextModel'
+pod 'Firebase/MLNLLanguageID'
+pod 'Firebase/MLNLTranslate'
 pod 'MaterialComponents/List'
 pod 'MaterialComponents/AppBar'
 pod 'MaterialComponents/Chips'
