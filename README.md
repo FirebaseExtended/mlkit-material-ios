@@ -9,6 +9,7 @@ The goal is to make it as easy as possible to integrate ML Kit into your app wit
 You can open each of the following apps as an Xcode project, and run
 them on a mobile device or a simulator. Simply install the pods and open
 the .xcworkspace file to see the project in Xcode.
+
 ```
 $ pod install --repo-update
 $ open your-project.xcworkspace
