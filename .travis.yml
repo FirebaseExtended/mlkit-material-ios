@@ -1,0 +1,30 @@
+osx_image: xcode10
+
+language: objective-c
+cache:
+  - bundler
+  - cocoapods
+
+matrix:
+  include:
+  - podfile: ShowcaseApp/Podfile
+    env: SAMPLE=ShowcaseApp
+  - podfile: TranslateDemo/Podfile
+    env: SAMPLE=TranslateDemo
+
+before_install:
+  - cd $SAMPLE
+  - bundle install
+  - gem install xcpretty
+  - bundle exec pod install --repo-update
+  - cp ../mock-GoogleService-Info.plist ./GoogleService-Info.plist
+  - sed -i '' '/<key>BUNDLE_ID</{n;s/id/com.google.firebase.mlkit.'$SAMPLE'/;}' GoogleService-Info.plist
+  - gem install xcodeproj
+  - ruby ../info_script.rb $SAMPLE
+  - cd -
+
+script: ./test.sh
+
+branches:
+  only:
+    - master
