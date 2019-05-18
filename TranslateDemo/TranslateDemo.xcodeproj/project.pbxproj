@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1001E6F720CEE0DD00445CB3 /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1001E6F620CEE0DD00445CB3 /* UIUtilities.swift */; };
 		1001E6FD20CF0C8F00445CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1001E6FC20CF0C8F00445CB3 /* Assets.xcassets */; };
+		1003B0862290631D00C6F6AE /* TranslateDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003B0852290631D00C6F6AE /* TranslateDemoTests.swift */; };
 		10224B5E2087E49F00A77316 /* MLKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10224B5B2087E49F00A77316 /* MLKitExtensions.swift */; };
 		10330DC82270B43B00B68BC5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10330DC72270B43B00B68BC5 /* SearchViewController.swift */; };
 		10330DCC227261B200B68BC5 /* CameraOverlayview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10330DCB227261B200B68BC5 /* CameraOverlayview.swift */; };
@@ -18,9 +19,22 @@
 		BB287B3920729CE90069707A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB287B3820729CE90069707A /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1003B0882290631D00C6F6AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB287B2D20729CE90069707A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB287B3420729CE90069707A;
+			remoteInfo = TranslateDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1001E6F620CEE0DD00445CB3 /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
 		1001E6FC20CF0C8F00445CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1003B0832290631D00C6F6AE /* TranslateDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1003B0852290631D00C6F6AE /* TranslateDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateDemoTests.swift; sourceTree = "<group>"; };
+		1003B0872290631D00C6F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10224B5B2087E49F00A77316 /* MLKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLKitExtensions.swift; sourceTree = "<group>"; };
 		10330DC72270B43B00B68BC5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		10330DCB227261B200B68BC5 /* CameraOverlayview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOverlayview.swift; sourceTree = "<group>"; };
@@ -33,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1003B0802290631D00C6F6AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB287B3220729CE90069707A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1003B0842290631D00C6F6AE /* TranslateDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1003B0852290631D00C6F6AE /* TranslateDemoTests.swift */,
+				1003B0872290631D00C6F6AE /* Info.plist */,
+			);
+			path = TranslateDemoTests;
+			sourceTree = "<group>";
+		};
 		70430DF470DFF802A6B65781 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +85,7 @@
 			children = (
 				1001E6FC20CF0C8F00445CB3 /* Assets.xcassets */,
 				BB287B3720729CE90069707A /* TranslateDemo */,
+				1003B0842290631D00C6F6AE /* TranslateDemoTests */,
 				BB287B3620729CE90069707A /* Products */,
 				70430DF470DFF802A6B65781 /* Pods */,
 			);
@@ -64,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BB287B3520729CE90069707A /* TranslateDemo.app */,
+				1003B0832290631D00C6F6AE /* TranslateDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +127,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1003B0822290631D00C6F6AE /* TranslateDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1003B08C2290631D00C6F6AE /* Build configuration list for PBXNativeTarget "TranslateDemoTests" */;
+			buildPhases = (
+				1003B07F2290631D00C6F6AE /* Sources */,
+				1003B0802290631D00C6F6AE /* Frameworks */,
+				1003B0812290631D00C6F6AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1003B0892290631D00C6F6AE /* PBXTargetDependency */,
+			);
+			name = TranslateDemoTests;
+			productName = TranslateDemoTests;
+			productReference = 1003B0832290631D00C6F6AE /* TranslateDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BB287B3420729CE90069707A /* TranslateDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB287B4720729CE90069707A /* Build configuration list for PBXNativeTarget "TranslateDemo" */;
@@ -118,10 +168,15 @@
 		BB287B2D20729CE90069707A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Google Inc.";
 				TargetAttributes = {
+					1003B0822290631D00C6F6AE = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BB287B3420729CE90069707A;
+					};
 					BB287B3420729CE90069707A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
@@ -142,11 +197,19 @@
 			projectRoot = "";
 			targets = (
 				BB287B3420729CE90069707A /* TranslateDemo */,
+				1003B0822290631D00C6F6AE /* TranslateDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1003B0812290631D00C6F6AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB287B3320729CE90069707A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,6 +222,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1003B07F2290631D00C6F6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1003B0862290631D00C6F6AE /* TranslateDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB287B3120729CE90069707A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +246,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1003B0892290631D00C6F6AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB287B3420729CE90069707A /* TranslateDemo */;
+			targetProxy = 1003B0882290631D00C6F6AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		10C59CE52268AD4200FCC676 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -187,6 +266,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1003B08A2290631D00C6F6AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TranslateDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.firebaseml.showcase.TranslateDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranslateDemo.app/TranslateDemo";
+			};
+			name = Debug;
+		};
+		1003B08B2290631D00C6F6AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TranslateDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.firebaseml.showcase.TranslateDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranslateDemo.app/TranslateDemo";
+			};
+			name = Release;
+		};
 		BB287B4520729CE90069707A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,6 +455,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1003B08C2290631D00C6F6AE /* Build configuration list for PBXNativeTarget "TranslateDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1003B08A2290631D00C6F6AE /* Debug */,
+				1003B08B2290631D00C6F6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB287B3020729CE90069707A /* Build configuration list for PBXProject "TranslateDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
