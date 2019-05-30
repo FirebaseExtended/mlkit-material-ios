@@ -9,8 +9,6 @@ matrix:
   include:
   - podfile: ShowcaseApp/Podfile
     env: SAMPLE=ShowcaseApp
-  - podfile: TranslateDemo/Podfile
-    env: SAMPLE=TranslateDemo
 
 before_install:
   - cd $SAMPLE
