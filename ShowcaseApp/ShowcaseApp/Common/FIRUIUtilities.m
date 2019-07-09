@@ -102,59 +102,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage *)orientedUpImageFromImage:(UIImage *)image {
   FIRVisionDetectorImageOrientation orientation =
-      [FIRUIUtilities imageOrientationFromOrientation:UIDevice.currentDevice.orientation
-                            withCaptureDevicePosition:AVCaptureDevicePositionBack];
-
+  [FIRUIUtilities imageOrientationFromOrientation:UIDevice.currentDevice.orientation
+                        withCaptureDevicePosition:AVCaptureDevicePositionBack];
   // No-op if the orientation is already correct
   if (orientation == FIRVisionDetectorImageOrientationTopLeft) return image;
 
-  // Calculate the proper transformation to make the image upright.
-  // Steps: 1. Rotate the image if it's Left, Right or Down oriented. 2. Flip the image if it is
-  // mirrored.
-  CGAffineTransform transform = CGAffineTransformIdentity;
-
+  CGSize size = image.size;
   switch (orientation) {
-    case FIRVisionDetectorImageOrientationRightTop:
-      transform = CGAffineTransformTranslate(transform, 0, image.size.height);
-      transform = CGAffineTransformRotate(transform, -M_PI_2);
-      break;
+    case FIRVisionDetectorImageOrientationRightTop: {
+      UIGraphicsBeginImageContext(CGSizeMake(size.height, size.width));
+      [[UIImage imageWithCGImage:image.CGImage scale:1.0 orientation:UIImageOrientationRight]
+       drawInRect:CGRectMake(0, 0, size.height, size.width)];
+      UIImage *rotatedImage = UIGraphicsGetImageFromCurrentImageContext();
+      UIGraphicsEndImageContext();
+      return rotatedImage;
+    }
     case FIRVisionDetectorImageOrientationTopLeft:
     case FIRVisionDetectorImageOrientationTopRight:
     case FIRVisionDetectorImageOrientationBottomRight:
     case FIRVisionDetectorImageOrientationBottomLeft:
     case FIRVisionDetectorImageOrientationLeftTop:
     case FIRVisionDetectorImageOrientationRightBottom:
-    case FIRVisionDetectorImageOrientationLeftBottom:
-      // TODO: handle other cases as well.
-      break;
+    case FIRVisionDetectorImageOrientationLeftBottom: {
+      // TODO(zhoumi): handle other cases as well.
+      return image;
+    }
   }
-
-  // Draws the underlying CGImage into a new context, applying the transform calculated above.
-  CGContextRef ctx = CGBitmapContextCreate(
-      NULL, image.size.width, image.size.height, CGImageGetBitsPerComponent(image.CGImage), 0,
-      CGImageGetColorSpace(image.CGImage), CGImageGetBitmapInfo(image.CGImage));
-  CGContextConcatCTM(ctx, transform);
-  switch (orientation) {
-    case FIRVisionDetectorImageOrientationRightTop:
-      CGContextDrawImage(ctx, CGRectMake(0, 0, image.size.height, image.size.width), image.CGImage);
-      break;
-    case FIRVisionDetectorImageOrientationTopLeft:
-    case FIRVisionDetectorImageOrientationTopRight:
-    case FIRVisionDetectorImageOrientationBottomRight:
-    case FIRVisionDetectorImageOrientationBottomLeft:
-    case FIRVisionDetectorImageOrientationLeftTop:
-    case FIRVisionDetectorImageOrientationRightBottom:
-    case FIRVisionDetectorImageOrientationLeftBottom:
-      // TODO: handle other cases as well.
-      break;
-  }
-
-  // Creates a new UIImage from the drawing context
-  CGImageRef cgImage = CGBitmapContextCreateImage(ctx);
-  UIImage *uiImage = [UIImage imageWithCGImage:cgImage];
-  CGContextRelease(ctx);
-  CGImageRelease(cgImage);
-  return uiImage;
 }
 
 + (UIEdgeInsets)safeAreaInsets {
