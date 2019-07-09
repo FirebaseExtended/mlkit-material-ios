@@ -124,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
     case FIRVisionDetectorImageOrientationLeftTop:
     case FIRVisionDetectorImageOrientationRightBottom:
     case FIRVisionDetectorImageOrientationLeftBottom: {
-      // TODO(zhoumi): handle other cases as well.
+      // TODO: handle other cases as well.
       return image;
     }
   }
