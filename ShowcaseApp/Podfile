@@ -1,15 +1,17 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
 platform :ios, '9.0'
 # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 use_frameworks!
 
-pod 'FirebaseMLCommon'
-pod 'FirebaseMLVision'
-pod 'FirebaseMLVisionObjectDetection'
+pod 'Firebase/Analytics'
+pod 'Firebase/MLCommon'
+pod 'Firebase/MLVision'
+pod 'Firebase/MLVisionObjectDetection'
 
 pod 'MaterialComponents'
 pod 'PINRemoteImage'
 
 target 'ShowcaseApp' do
+end
+
+target 'ShowcaseAppSwift' do
 end

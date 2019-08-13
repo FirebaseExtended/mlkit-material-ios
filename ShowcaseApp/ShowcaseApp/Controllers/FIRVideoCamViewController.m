@@ -29,9 +29,7 @@
 #import "FIRProductSearchRequest.h"
 #import "FIRUIUtilities.h"
 
-@import FirebaseMLCommon;
-@import FirebaseMLVision;
-@import FirebaseMLVisionObjectDetection;
+@import Firebase;
 @import MaterialComponents;
 @import GTMSessionFetcher;
 
