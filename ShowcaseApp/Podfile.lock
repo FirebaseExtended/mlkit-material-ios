@@ -752,7 +752,6 @@ PODS:
     - FLAnimatedImage (>= 1.0)
     - PINRemoteImage/Core
   - Protobuf (3.9.0)
-  - SwiftLint (0.34.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -824,7 +823,6 @@ SPEC CHECKSUMS:
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
-  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
 PODFILE CHECKSUM: 381e9897606208080474d25aa219e89d313bf1d9
 
