@@ -262,7 +262,7 @@ class VideoCamViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     previewLayer.videoGravity = .resizeAspectFill
     let rootLayer = previewView.layer
     rootLayer.masksToBounds = true
-    previewView.frame = rootLayer.bounds
+    previewLayer.frame = rootLayer.bounds
     rootLayer.addSublayer(previewLayer)
   }
 
