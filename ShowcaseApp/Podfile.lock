@@ -110,115 +110,115 @@ PODS:
   - GTMSessionFetcher/Core (1.2.2)
   - GTMSessionFetcher/Full (1.2.2):
     - GTMSessionFetcher/Core (= 1.2.2)
-  - MaterialComponents (90.0.0):
-    - MaterialComponents/ActionSheet (= 90.0.0)
-    - "MaterialComponents/ActionSheet+Theming (= 90.0.0)"
-    - MaterialComponents/ActivityIndicator (= 90.0.0)
-    - "MaterialComponents/ActivityIndicator+ColorThemer (= 90.0.0)"
-    - MaterialComponents/AnimationTiming (= 90.0.0)
-    - MaterialComponents/AppBar (= 90.0.0)
-    - "MaterialComponents/AppBar+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/AppBar+Theming (= 90.0.0)"
-    - "MaterialComponents/AppBar+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/Banner (= 90.0.0)
-    - "MaterialComponents/Banner+Theming (= 90.0.0)"
-    - MaterialComponents/BottomAppBar (= 90.0.0)
-    - "MaterialComponents/BottomAppBar+ColorThemer (= 90.0.0)"
-    - MaterialComponents/BottomNavigation (= 90.0.0)
-    - "MaterialComponents/BottomNavigation+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/BottomNavigation+Theming (= 90.0.0)"
-    - "MaterialComponents/BottomNavigation+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/BottomSheet (= 90.0.0)
-    - "MaterialComponents/BottomSheet+ShapeThemer (= 90.0.0)"
-    - MaterialComponents/ButtonBar (= 90.0.0)
-    - "MaterialComponents/ButtonBar+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/ButtonBar+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/Buttons (= 90.0.0)
-    - "MaterialComponents/Buttons+ButtonThemer (= 90.0.0)"
-    - "MaterialComponents/Buttons+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/Buttons+ShapeThemer (= 90.0.0)"
-    - "MaterialComponents/Buttons+Theming (= 90.0.0)"
-    - "MaterialComponents/Buttons+TitleColorAccessibilityMutator (= 90.0.0)"
-    - "MaterialComponents/Buttons+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/Cards (= 90.0.0)
-    - "MaterialComponents/Cards+CardThemer (= 90.0.0)"
-    - "MaterialComponents/Cards+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/Cards+ShapeThemer (= 90.0.0)"
-    - "MaterialComponents/Cards+Theming (= 90.0.0)"
-    - MaterialComponents/Chips (= 90.0.0)
-    - "MaterialComponents/Chips+ChipThemer (= 90.0.0)"
-    - "MaterialComponents/Chips+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/Chips+FontThemer (= 90.0.0)"
-    - "MaterialComponents/Chips+ShapeThemer (= 90.0.0)"
-    - "MaterialComponents/Chips+Theming (= 90.0.0)"
-    - "MaterialComponents/Chips+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/CollectionCells (= 90.0.0)
-    - MaterialComponents/CollectionLayoutAttributes (= 90.0.0)
-    - MaterialComponents/Collections (= 90.0.0)
-    - MaterialComponents/Dialogs (= 90.0.0)
-    - "MaterialComponents/Dialogs+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/Dialogs+DialogThemer (= 90.0.0)"
-    - "MaterialComponents/Dialogs+Theming (= 90.0.0)"
-    - "MaterialComponents/Dialogs+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/Elevation (= 90.0.0)
-    - MaterialComponents/FeatureHighlight (= 90.0.0)
-    - "MaterialComponents/FeatureHighlight+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/FeatureHighlight+FeatureHighlightAccessibilityMutator (= 90.0.0)"
-    - "MaterialComponents/FeatureHighlight+FontThemer (= 90.0.0)"
-    - "MaterialComponents/FeatureHighlight+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/FlexibleHeader (= 90.0.0)
-    - "MaterialComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (= 90.0.0)"
-    - "MaterialComponents/FlexibleHeader+ColorThemer (= 90.0.0)"
-    - MaterialComponents/HeaderStackView (= 90.0.0)
-    - "MaterialComponents/HeaderStackView+ColorThemer (= 90.0.0)"
-    - MaterialComponents/Ink (= 90.0.0)
-    - "MaterialComponents/Ink+ColorThemer (= 90.0.0)"
-    - MaterialComponents/LibraryInfo (= 90.0.0)
-    - MaterialComponents/List (= 90.0.0)
-    - "MaterialComponents/List+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/List+ListThemer (= 90.0.0)"
-    - "MaterialComponents/List+Theming (= 90.0.0)"
-    - "MaterialComponents/List+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/MaskedTransition (= 90.0.0)
-    - MaterialComponents/NavigationBar (= 90.0.0)
-    - "MaterialComponents/NavigationBar+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/NavigationBar+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/NavigationDrawer (= 90.0.0)
-    - "MaterialComponents/NavigationDrawer+ColorThemer (= 90.0.0)"
-    - MaterialComponents/OverlayWindow (= 90.0.0)
-    - MaterialComponents/PageControl (= 90.0.0)
-    - "MaterialComponents/PageControl+ColorThemer (= 90.0.0)"
-    - MaterialComponents/Palettes (= 90.0.0)
-    - MaterialComponents/private (= 90.0.0)
-    - MaterialComponents/ProgressView (= 90.0.0)
-    - "MaterialComponents/ProgressView+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/ProgressView+Theming (= 90.0.0)"
-    - MaterialComponents/Ripple (= 90.0.0)
-    - MaterialComponents/schemes (= 90.0.0)
-    - MaterialComponents/ShadowElevations (= 90.0.0)
-    - MaterialComponents/ShadowLayer (= 90.0.0)
-    - MaterialComponents/ShapeLibrary (= 90.0.0)
-    - MaterialComponents/Shapes (= 90.0.0)
-    - MaterialComponents/Slider (= 90.0.0)
-    - "MaterialComponents/Slider+ColorThemer (= 90.0.0)"
-    - MaterialComponents/Snackbar (= 90.0.0)
-    - "MaterialComponents/Snackbar+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/Snackbar+FontThemer (= 90.0.0)"
-    - "MaterialComponents/Snackbar+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/Tabs (= 90.0.0)
-    - "MaterialComponents/Tabs+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/Tabs+FontThemer (= 90.0.0)"
-    - "MaterialComponents/Tabs+Theming (= 90.0.0)"
-    - "MaterialComponents/Tabs+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/TextFields (= 90.0.0)
-    - "MaterialComponents/TextFields+ColorThemer (= 90.0.0)"
-    - "MaterialComponents/TextFields+ContainedInputView (= 90.0.0)"
-    - "MaterialComponents/TextFields+FontThemer (= 90.0.0)"
-    - "MaterialComponents/TextFields+Theming (= 90.0.0)"
-    - "MaterialComponents/TextFields+TypographyThemer (= 90.0.0)"
-    - MaterialComponents/Themes (= 90.0.0)
-    - MaterialComponents/Typography (= 90.0.0)
-  - MaterialComponents/ActionSheet (90.0.0):
+  - MaterialComponents (91.0.0):
+    - MaterialComponents/ActionSheet (= 91.0.0)
+    - "MaterialComponents/ActionSheet+Theming (= 91.0.0)"
+    - MaterialComponents/ActivityIndicator (= 91.0.0)
+    - "MaterialComponents/ActivityIndicator+ColorThemer (= 91.0.0)"
+    - MaterialComponents/AnimationTiming (= 91.0.0)
+    - MaterialComponents/AppBar (= 91.0.0)
+    - "MaterialComponents/AppBar+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/AppBar+Theming (= 91.0.0)"
+    - "MaterialComponents/AppBar+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/Banner (= 91.0.0)
+    - "MaterialComponents/Banner+Theming (= 91.0.0)"
+    - MaterialComponents/BottomAppBar (= 91.0.0)
+    - "MaterialComponents/BottomAppBar+ColorThemer (= 91.0.0)"
+    - MaterialComponents/BottomNavigation (= 91.0.0)
+    - "MaterialComponents/BottomNavigation+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/BottomNavigation+Theming (= 91.0.0)"
+    - "MaterialComponents/BottomNavigation+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/BottomSheet (= 91.0.0)
+    - "MaterialComponents/BottomSheet+ShapeThemer (= 91.0.0)"
+    - MaterialComponents/ButtonBar (= 91.0.0)
+    - "MaterialComponents/ButtonBar+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/ButtonBar+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/Buttons (= 91.0.0)
+    - "MaterialComponents/Buttons+ButtonThemer (= 91.0.0)"
+    - "MaterialComponents/Buttons+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/Buttons+ShapeThemer (= 91.0.0)"
+    - "MaterialComponents/Buttons+Theming (= 91.0.0)"
+    - "MaterialComponents/Buttons+TitleColorAccessibilityMutator (= 91.0.0)"
+    - "MaterialComponents/Buttons+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/Cards (= 91.0.0)
+    - "MaterialComponents/Cards+CardThemer (= 91.0.0)"
+    - "MaterialComponents/Cards+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/Cards+ShapeThemer (= 91.0.0)"
+    - "MaterialComponents/Cards+Theming (= 91.0.0)"
+    - MaterialComponents/Chips (= 91.0.0)
+    - "MaterialComponents/Chips+ChipThemer (= 91.0.0)"
+    - "MaterialComponents/Chips+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/Chips+FontThemer (= 91.0.0)"
+    - "MaterialComponents/Chips+ShapeThemer (= 91.0.0)"
+    - "MaterialComponents/Chips+Theming (= 91.0.0)"
+    - "MaterialComponents/Chips+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/CollectionCells (= 91.0.0)
+    - MaterialComponents/CollectionLayoutAttributes (= 91.0.0)
+    - MaterialComponents/Collections (= 91.0.0)
+    - MaterialComponents/Dialogs (= 91.0.0)
+    - "MaterialComponents/Dialogs+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/Dialogs+DialogThemer (= 91.0.0)"
+    - "MaterialComponents/Dialogs+Theming (= 91.0.0)"
+    - "MaterialComponents/Dialogs+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/Elevation (= 91.0.0)
+    - MaterialComponents/FeatureHighlight (= 91.0.0)
+    - "MaterialComponents/FeatureHighlight+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/FeatureHighlight+FeatureHighlightAccessibilityMutator (= 91.0.0)"
+    - "MaterialComponents/FeatureHighlight+FontThemer (= 91.0.0)"
+    - "MaterialComponents/FeatureHighlight+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/FlexibleHeader (= 91.0.0)
+    - "MaterialComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (= 91.0.0)"
+    - "MaterialComponents/FlexibleHeader+ColorThemer (= 91.0.0)"
+    - MaterialComponents/HeaderStackView (= 91.0.0)
+    - "MaterialComponents/HeaderStackView+ColorThemer (= 91.0.0)"
+    - MaterialComponents/Ink (= 91.0.0)
+    - "MaterialComponents/Ink+ColorThemer (= 91.0.0)"
+    - MaterialComponents/LibraryInfo (= 91.0.0)
+    - MaterialComponents/List (= 91.0.0)
+    - "MaterialComponents/List+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/List+ListThemer (= 91.0.0)"
+    - "MaterialComponents/List+Theming (= 91.0.0)"
+    - "MaterialComponents/List+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/MaskedTransition (= 91.0.0)
+    - MaterialComponents/NavigationBar (= 91.0.0)
+    - "MaterialComponents/NavigationBar+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/NavigationBar+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/NavigationDrawer (= 91.0.0)
+    - "MaterialComponents/NavigationDrawer+ColorThemer (= 91.0.0)"
+    - MaterialComponents/OverlayWindow (= 91.0.0)
+    - MaterialComponents/PageControl (= 91.0.0)
+    - "MaterialComponents/PageControl+ColorThemer (= 91.0.0)"
+    - MaterialComponents/Palettes (= 91.0.0)
+    - MaterialComponents/private (= 91.0.0)
+    - MaterialComponents/ProgressView (= 91.0.0)
+    - "MaterialComponents/ProgressView+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/ProgressView+Theming (= 91.0.0)"
+    - MaterialComponents/Ripple (= 91.0.0)
+    - MaterialComponents/schemes (= 91.0.0)
+    - MaterialComponents/ShadowElevations (= 91.0.0)
+    - MaterialComponents/ShadowLayer (= 91.0.0)
+    - MaterialComponents/ShapeLibrary (= 91.0.0)
+    - MaterialComponents/Shapes (= 91.0.0)
+    - MaterialComponents/Slider (= 91.0.0)
+    - "MaterialComponents/Slider+ColorThemer (= 91.0.0)"
+    - MaterialComponents/Snackbar (= 91.0.0)
+    - "MaterialComponents/Snackbar+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/Snackbar+FontThemer (= 91.0.0)"
+    - "MaterialComponents/Snackbar+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/Tabs (= 91.0.0)
+    - "MaterialComponents/Tabs+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/Tabs+FontThemer (= 91.0.0)"
+    - "MaterialComponents/Tabs+Theming (= 91.0.0)"
+    - "MaterialComponents/Tabs+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/TextFields (= 91.0.0)
+    - "MaterialComponents/TextFields+ColorThemer (= 91.0.0)"
+    - "MaterialComponents/TextFields+ContainedInputView (= 91.0.0)"
+    - "MaterialComponents/TextFields+FontThemer (= 91.0.0)"
+    - "MaterialComponents/TextFields+Theming (= 91.0.0)"
+    - "MaterialComponents/TextFields+TypographyThemer (= 91.0.0)"
+    - MaterialComponents/Themes (= 91.0.0)
+    - MaterialComponents/Typography (= 91.0.0)
+  - MaterialComponents/ActionSheet (91.0.0):
     - MaterialComponents/BottomSheet
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -226,21 +226,21 @@ PODS:
     - MaterialComponents/Ripple
     - MaterialComponents/ShadowElevations
     - MaterialComponents/Typography
-  - "MaterialComponents/ActionSheet+Theming (90.0.0)":
+  - "MaterialComponents/ActionSheet+Theming (91.0.0)":
     - MaterialComponents/ActionSheet
     - MaterialComponents/Elevation
     - MaterialComponents/private/Color
     - MaterialComponents/schemes/Container
-  - MaterialComponents/ActivityIndicator (90.0.0):
+  - MaterialComponents/ActivityIndicator (91.0.0):
     - MaterialComponents/Palettes
     - MaterialComponents/private/Application
     - MDFInternationalization
     - MotionAnimator (~> 2.0)
-  - "MaterialComponents/ActivityIndicator+ColorThemer (90.0.0)":
+  - "MaterialComponents/ActivityIndicator+ColorThemer (91.0.0)":
     - MaterialComponents/ActivityIndicator
     - MaterialComponents/schemes/Color
-  - MaterialComponents/AnimationTiming (90.0.0)
-  - MaterialComponents/AppBar (90.0.0):
+  - MaterialComponents/AnimationTiming (91.0.0)
+  - MaterialComponents/AppBar (91.0.0):
     - MaterialComponents/FlexibleHeader
     - MaterialComponents/HeaderStackView
     - MaterialComponents/NavigationBar
@@ -251,37 +251,37 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/AppBar+ColorThemer (90.0.0)":
+  - "MaterialComponents/AppBar+ColorThemer (91.0.0)":
     - MaterialComponents/AppBar
     - "MaterialComponents/FlexibleHeader+ColorThemer"
     - "MaterialComponents/NavigationBar+ColorThemer"
     - MaterialComponents/Themes
-  - "MaterialComponents/AppBar+Theming (90.0.0)":
+  - "MaterialComponents/AppBar+Theming (91.0.0)":
     - MaterialComponents/AppBar
     - MaterialComponents/schemes/Container
-  - "MaterialComponents/AppBar+TypographyThemer (90.0.0)":
+  - "MaterialComponents/AppBar+TypographyThemer (91.0.0)":
     - MaterialComponents/AppBar
     - "MaterialComponents/NavigationBar+TypographyThemer"
-  - MaterialComponents/Banner (90.0.0):
+  - MaterialComponents/Banner (91.0.0):
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
     - MaterialComponents/Typography
-  - "MaterialComponents/Banner+Theming (90.0.0)":
+  - "MaterialComponents/Banner+Theming (91.0.0)":
     - MaterialComponents/Banner
     - MaterialComponents/Buttons
     - "MaterialComponents/Buttons+Theming"
     - MaterialComponents/Elevation
     - MaterialComponents/schemes/Container
     - MaterialComponents/Typography
-  - MaterialComponents/BottomAppBar (90.0.0):
+  - MaterialComponents/BottomAppBar (91.0.0):
     - MaterialComponents/Buttons
     - MaterialComponents/NavigationBar
     - MaterialComponents/private/Math
     - MDFInternationalization
-  - "MaterialComponents/BottomAppBar+ColorThemer (90.0.0)":
+  - "MaterialComponents/BottomAppBar+ColorThemer (91.0.0)":
     - MaterialComponents/BottomAppBar
     - MaterialComponents/Themes
-  - MaterialComponents/BottomNavigation (90.0.0):
+  - MaterialComponents/BottomNavigation (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/Palettes
@@ -291,19 +291,19 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/BottomNavigation+ColorThemer (90.0.0)":
+  - "MaterialComponents/BottomNavigation+ColorThemer (91.0.0)":
     - MaterialComponents/BottomNavigation
     - MaterialComponents/schemes/Color
-  - "MaterialComponents/BottomNavigation+Theming (90.0.0)":
+  - "MaterialComponents/BottomNavigation+Theming (91.0.0)":
     - MaterialComponents/BottomNavigation
     - MaterialComponents/schemes/Color
     - MaterialComponents/schemes/Container
     - MaterialComponents/schemes/Typography
     - MaterialComponents/ShadowElevations
-  - "MaterialComponents/BottomNavigation+TypographyThemer (90.0.0)":
+  - "MaterialComponents/BottomNavigation+TypographyThemer (91.0.0)":
     - MaterialComponents/BottomNavigation
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/BottomSheet (90.0.0):
+  - MaterialComponents/BottomSheet (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/private/KeyboardWatcher
     - MaterialComponents/private/Math
@@ -311,20 +311,20 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
-  - "MaterialComponents/BottomSheet+ShapeThemer (90.0.0)":
+  - "MaterialComponents/BottomSheet+ShapeThemer (91.0.0)":
     - MaterialComponents/BottomSheet
     - MaterialComponents/schemes/Shape
-  - MaterialComponents/ButtonBar (90.0.0):
+  - MaterialComponents/ButtonBar (91.0.0):
     - MaterialComponents/Buttons
     - MaterialComponents/private/Application
     - MDFInternationalization
-  - "MaterialComponents/ButtonBar+ColorThemer (90.0.0)":
+  - "MaterialComponents/ButtonBar+ColorThemer (91.0.0)":
     - MaterialComponents/ButtonBar
     - MaterialComponents/Themes
-  - "MaterialComponents/ButtonBar+TypographyThemer (90.0.0)":
+  - "MaterialComponents/ButtonBar+TypographyThemer (91.0.0)":
     - MaterialComponents/ButtonBar
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/Buttons (90.0.0):
+  - MaterialComponents/Buttons (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -335,32 +335,32 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - "MaterialComponents/Buttons+ButtonThemer (90.0.0)":
+  - "MaterialComponents/Buttons+ButtonThemer (91.0.0)":
     - MaterialComponents/Buttons
     - "MaterialComponents/Buttons+ColorThemer"
     - "MaterialComponents/Buttons+ShapeThemer"
     - "MaterialComponents/Buttons+TypographyThemer"
     - MaterialComponents/Palettes
-  - "MaterialComponents/Buttons+ColorThemer (90.0.0)":
+  - "MaterialComponents/Buttons+ColorThemer (91.0.0)":
     - MaterialComponents/Buttons
     - MaterialComponents/schemes/Color
-  - "MaterialComponents/Buttons+ShapeThemer (90.0.0)":
+  - "MaterialComponents/Buttons+ShapeThemer (91.0.0)":
     - MaterialComponents/Buttons
     - MaterialComponents/schemes/Shape
-  - "MaterialComponents/Buttons+Theming (90.0.0)":
+  - "MaterialComponents/Buttons+Theming (91.0.0)":
     - MaterialComponents/Buttons
     - "MaterialComponents/Buttons+ColorThemer"
     - "MaterialComponents/Buttons+ShapeThemer"
     - "MaterialComponents/Buttons+TypographyThemer"
     - MaterialComponents/schemes/Container
     - MaterialComponents/ShadowElevations
-  - "MaterialComponents/Buttons+TitleColorAccessibilityMutator (90.0.0)":
+  - "MaterialComponents/Buttons+TitleColorAccessibilityMutator (91.0.0)":
     - MaterialComponents/Buttons
     - MDFTextAccessibility
-  - "MaterialComponents/Buttons+TypographyThemer (90.0.0)":
+  - "MaterialComponents/Buttons+TypographyThemer (91.0.0)":
     - MaterialComponents/Buttons
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/Cards (90.0.0):
+  - MaterialComponents/Cards (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Icons/ic_check_circle
@@ -368,22 +368,22 @@ PODS:
     - MaterialComponents/Ripple
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Shapes
-  - "MaterialComponents/Cards+CardThemer (90.0.0)":
+  - "MaterialComponents/Cards+CardThemer (91.0.0)":
     - MaterialComponents/Cards
     - "MaterialComponents/Cards+ColorThemer"
     - "MaterialComponents/Cards+ShapeThemer"
-  - "MaterialComponents/Cards+ColorThemer (90.0.0)":
+  - "MaterialComponents/Cards+ColorThemer (91.0.0)":
     - MaterialComponents/Cards
     - MaterialComponents/schemes/Color
-  - "MaterialComponents/Cards+ShapeThemer (90.0.0)":
+  - "MaterialComponents/Cards+ShapeThemer (91.0.0)":
     - MaterialComponents/Cards
     - MaterialComponents/schemes/Shape
-  - "MaterialComponents/Cards+Theming (90.0.0)":
+  - "MaterialComponents/Cards+Theming (91.0.0)":
     - MaterialComponents/Cards
     - "MaterialComponents/Cards+ColorThemer"
     - "MaterialComponents/Cards+ShapeThemer"
     - MaterialComponents/schemes/Container
-  - MaterialComponents/Chips (90.0.0):
+  - MaterialComponents/Chips (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -395,30 +395,30 @@ PODS:
     - MaterialComponents/TextFields
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/Chips+ChipThemer (90.0.0)":
+  - "MaterialComponents/Chips+ChipThemer (91.0.0)":
     - MaterialComponents/Chips
     - "MaterialComponents/Chips+ColorThemer"
     - "MaterialComponents/Chips+ShapeThemer"
     - "MaterialComponents/Chips+TypographyThemer"
-  - "MaterialComponents/Chips+ColorThemer (90.0.0)":
+  - "MaterialComponents/Chips+ColorThemer (91.0.0)":
     - MaterialComponents/Chips
     - MaterialComponents/schemes/Color
-  - "MaterialComponents/Chips+FontThemer (90.0.0)":
+  - "MaterialComponents/Chips+FontThemer (91.0.0)":
     - MaterialComponents/Chips
     - MaterialComponents/Themes
-  - "MaterialComponents/Chips+ShapeThemer (90.0.0)":
+  - "MaterialComponents/Chips+ShapeThemer (91.0.0)":
     - MaterialComponents/Chips
     - MaterialComponents/schemes/Shape
-  - "MaterialComponents/Chips+Theming (90.0.0)":
+  - "MaterialComponents/Chips+Theming (91.0.0)":
     - MaterialComponents/Chips
     - "MaterialComponents/Chips+ColorThemer"
     - "MaterialComponents/Chips+ShapeThemer"
     - "MaterialComponents/Chips+TypographyThemer"
     - MaterialComponents/schemes/Container
-  - "MaterialComponents/Chips+TypographyThemer (90.0.0)":
+  - "MaterialComponents/Chips+TypographyThemer (91.0.0)":
     - MaterialComponents/Chips
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/CollectionCells (90.0.0):
+  - MaterialComponents/CollectionCells (91.0.0):
     - MaterialComponents/CollectionLayoutAttributes
     - MaterialComponents/Ink
     - MaterialComponents/Palettes
@@ -431,8 +431,8 @@ PODS:
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/CollectionLayoutAttributes (90.0.0)
-  - MaterialComponents/Collections (90.0.0):
+  - MaterialComponents/CollectionLayoutAttributes (91.0.0)
+  - MaterialComponents/Collections (91.0.0):
     - MaterialComponents/CollectionCells
     - MaterialComponents/CollectionLayoutAttributes
     - MaterialComponents/Ink
@@ -440,7 +440,7 @@ PODS:
     - MaterialComponents/ShadowElevations
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
-  - MaterialComponents/Dialogs (90.0.0):
+  - MaterialComponents/Dialogs (91.0.0):
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
     - MaterialComponents/private/KeyboardWatcher
@@ -449,46 +449,46 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/Dialogs+ColorThemer (90.0.0)":
+  - "MaterialComponents/Dialogs+ColorThemer (91.0.0)":
     - "MaterialComponents/Buttons+ColorThemer"
     - MaterialComponents/Dialogs
     - MaterialComponents/Themes
-  - "MaterialComponents/Dialogs+DialogThemer (90.0.0)":
+  - "MaterialComponents/Dialogs+DialogThemer (91.0.0)":
     - "MaterialComponents/Buttons+ButtonThemer"
     - MaterialComponents/Dialogs
     - "MaterialComponents/Dialogs+ColorThemer"
     - "MaterialComponents/Dialogs+TypographyThemer"
-  - "MaterialComponents/Dialogs+Theming (90.0.0)":
+  - "MaterialComponents/Dialogs+Theming (91.0.0)":
     - "MaterialComponents/Buttons+Theming"
     - MaterialComponents/Dialogs
     - "MaterialComponents/Dialogs+ColorThemer"
     - "MaterialComponents/Dialogs+TypographyThemer"
     - MaterialComponents/schemes/Container
     - MaterialComponents/ShadowElevations
-  - "MaterialComponents/Dialogs+TypographyThemer (90.0.0)":
+  - "MaterialComponents/Dialogs+TypographyThemer (91.0.0)":
     - "MaterialComponents/Buttons+TypographyThemer"
     - MaterialComponents/Dialogs
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/Elevation (90.0.0):
+  - MaterialComponents/Elevation (91.0.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/FeatureHighlight (90.0.0):
+  - MaterialComponents/FeatureHighlight (91.0.0):
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFTextAccessibility
-  - "MaterialComponents/FeatureHighlight+ColorThemer (90.0.0)":
+  - "MaterialComponents/FeatureHighlight+ColorThemer (91.0.0)":
     - MaterialComponents/FeatureHighlight
     - MaterialComponents/Themes
-  - "MaterialComponents/FeatureHighlight+FeatureHighlightAccessibilityMutator (90.0.0)":
+  - "MaterialComponents/FeatureHighlight+FeatureHighlightAccessibilityMutator (91.0.0)":
     - MaterialComponents/FeatureHighlight
     - MDFTextAccessibility
-  - "MaterialComponents/FeatureHighlight+FontThemer (90.0.0)":
+  - "MaterialComponents/FeatureHighlight+FontThemer (91.0.0)":
     - MaterialComponents/FeatureHighlight
     - MaterialComponents/Themes
-  - "MaterialComponents/FeatureHighlight+TypographyThemer (90.0.0)":
+  - "MaterialComponents/FeatureHighlight+TypographyThemer (91.0.0)":
     - MaterialComponents/FeatureHighlight
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/FlexibleHeader (90.0.0):
+  - MaterialComponents/FlexibleHeader (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
@@ -496,23 +496,23 @@ PODS:
     - MaterialComponents/ShadowElevations
     - MaterialComponents/ShadowLayer
     - MDFTextAccessibility
-  - "MaterialComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (90.0.0)":
+  - "MaterialComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (91.0.0)":
     - MaterialComponents/FlexibleHeader
-  - "MaterialComponents/FlexibleHeader+ColorThemer (90.0.0)":
+  - "MaterialComponents/FlexibleHeader+ColorThemer (91.0.0)":
     - MaterialComponents/FlexibleHeader
     - MaterialComponents/schemes/Color
-  - MaterialComponents/HeaderStackView (90.0.0)
-  - "MaterialComponents/HeaderStackView+ColorThemer (90.0.0)":
+  - MaterialComponents/HeaderStackView (91.0.0)
+  - "MaterialComponents/HeaderStackView+ColorThemer (91.0.0)":
     - MaterialComponents/HeaderStackView
     - MaterialComponents/Themes
-  - MaterialComponents/Ink (90.0.0):
+  - MaterialComponents/Ink (91.0.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - "MaterialComponents/Ink+ColorThemer (90.0.0)":
+  - "MaterialComponents/Ink+ColorThemer (91.0.0)":
     - MaterialComponents/Ink
     - MaterialComponents/Themes
-  - MaterialComponents/LibraryInfo (90.0.0)
-  - MaterialComponents/List (90.0.0):
+  - MaterialComponents/LibraryInfo (91.0.0)
+  - MaterialComponents/List (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -521,107 +521,107 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/List+ColorThemer (90.0.0)":
+  - "MaterialComponents/List+ColorThemer (91.0.0)":
     - MaterialComponents/List
     - MaterialComponents/schemes/Color
-  - "MaterialComponents/List+ListThemer (90.0.0)":
+  - "MaterialComponents/List+ListThemer (91.0.0)":
     - MaterialComponents/List
     - "MaterialComponents/List+ColorThemer"
     - "MaterialComponents/List+TypographyThemer"
-  - "MaterialComponents/List+Theming (90.0.0)":
+  - "MaterialComponents/List+Theming (91.0.0)":
     - MaterialComponents/List
     - "MaterialComponents/List+ColorThemer"
     - "MaterialComponents/List+TypographyThemer"
     - MaterialComponents/schemes/Container
-  - "MaterialComponents/List+TypographyThemer (90.0.0)":
+  - "MaterialComponents/List+TypographyThemer (91.0.0)":
     - MaterialComponents/List
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/MaskedTransition (90.0.0):
+  - MaterialComponents/MaskedTransition (91.0.0):
     - MotionAnimator (~> 2.0)
     - MotionInterchange (~> 1.0)
     - MotionTransitioning (~> 5.0)
-  - MaterialComponents/NavigationBar (90.0.0):
+  - MaterialComponents/NavigationBar (91.0.0):
     - MaterialComponents/ButtonBar
     - MaterialComponents/Elevation
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - "MaterialComponents/NavigationBar+ColorThemer (90.0.0)":
+  - "MaterialComponents/NavigationBar+ColorThemer (91.0.0)":
     - MaterialComponents/NavigationBar
     - MaterialComponents/schemes/Color
-  - "MaterialComponents/NavigationBar+TypographyThemer (90.0.0)":
+  - "MaterialComponents/NavigationBar+TypographyThemer (91.0.0)":
     - MaterialComponents/NavigationBar
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/NavigationDrawer (90.0.0):
+  - MaterialComponents/NavigationDrawer (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Palettes
     - MaterialComponents/private/Math
     - MaterialComponents/private/UIMetrics
     - MaterialComponents/ShadowLayer
-  - "MaterialComponents/NavigationDrawer+ColorThemer (90.0.0)":
+  - "MaterialComponents/NavigationDrawer+ColorThemer (91.0.0)":
     - MaterialComponents/NavigationDrawer
     - MaterialComponents/schemes/Color
-  - MaterialComponents/OverlayWindow (90.0.0):
+  - MaterialComponents/OverlayWindow (91.0.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/PageControl (90.0.0):
+  - MaterialComponents/PageControl (91.0.0):
     - MDFInternationalization
-  - "MaterialComponents/PageControl+ColorThemer (90.0.0)":
+  - "MaterialComponents/PageControl+ColorThemer (91.0.0)":
     - MaterialComponents/PageControl
     - MaterialComponents/Themes
-  - MaterialComponents/Palettes (90.0.0)
-  - MaterialComponents/private (90.0.0):
-    - MaterialComponents/private/Application (= 90.0.0)
-    - MaterialComponents/private/Color (= 90.0.0)
-    - MaterialComponents/private/Icons (= 90.0.0)
-    - MaterialComponents/private/KeyboardWatcher (= 90.0.0)
-    - MaterialComponents/private/Math (= 90.0.0)
-    - MaterialComponents/private/Overlay (= 90.0.0)
-    - MaterialComponents/private/ThumbTrack (= 90.0.0)
-    - MaterialComponents/private/UIMetrics (= 90.0.0)
-  - MaterialComponents/private/Application (90.0.0)
-  - MaterialComponents/private/Color (90.0.0)
-  - MaterialComponents/private/Icons (90.0.0):
-    - MaterialComponents/private/Icons/Base (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_arrow_back (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_check (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_check_circle (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_chevron_right (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_color_lens (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_help_outline (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_info (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_more_horiz (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_radio_button_unchecked (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_reorder (= 90.0.0)
-    - MaterialComponents/private/Icons/ic_settings (= 90.0.0)
-  - MaterialComponents/private/Icons/Base (90.0.0)
-  - MaterialComponents/private/Icons/ic_arrow_back (90.0.0):
+  - MaterialComponents/Palettes (91.0.0)
+  - MaterialComponents/private (91.0.0):
+    - MaterialComponents/private/Application (= 91.0.0)
+    - MaterialComponents/private/Color (= 91.0.0)
+    - MaterialComponents/private/Icons (= 91.0.0)
+    - MaterialComponents/private/KeyboardWatcher (= 91.0.0)
+    - MaterialComponents/private/Math (= 91.0.0)
+    - MaterialComponents/private/Overlay (= 91.0.0)
+    - MaterialComponents/private/ThumbTrack (= 91.0.0)
+    - MaterialComponents/private/UIMetrics (= 91.0.0)
+  - MaterialComponents/private/Application (91.0.0)
+  - MaterialComponents/private/Color (91.0.0)
+  - MaterialComponents/private/Icons (91.0.0):
+    - MaterialComponents/private/Icons/Base (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_arrow_back (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_check (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_check_circle (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_chevron_right (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_color_lens (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_help_outline (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_info (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_more_horiz (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_radio_button_unchecked (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_reorder (= 91.0.0)
+    - MaterialComponents/private/Icons/ic_settings (= 91.0.0)
+  - MaterialComponents/private/Icons/Base (91.0.0)
+  - MaterialComponents/private/Icons/ic_arrow_back (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_check (90.0.0):
+  - MaterialComponents/private/Icons/ic_check (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_check_circle (90.0.0):
+  - MaterialComponents/private/Icons/ic_check_circle (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_chevron_right (90.0.0):
+  - MaterialComponents/private/Icons/ic_chevron_right (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_color_lens (90.0.0):
+  - MaterialComponents/private/Icons/ic_color_lens (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_help_outline (90.0.0):
+  - MaterialComponents/private/Icons/ic_help_outline (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_info (90.0.0):
+  - MaterialComponents/private/Icons/ic_info (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_more_horiz (90.0.0):
+  - MaterialComponents/private/Icons/ic_more_horiz (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_radio_button_unchecked (90.0.0):
+  - MaterialComponents/private/Icons/ic_radio_button_unchecked (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_reorder (90.0.0):
+  - MaterialComponents/private/Icons/ic_reorder (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Icons/ic_settings (90.0.0):
+  - MaterialComponents/private/Icons/ic_settings (91.0.0):
     - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/KeyboardWatcher (90.0.0):
+  - MaterialComponents/private/KeyboardWatcher (91.0.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (90.0.0)
-  - MaterialComponents/private/Overlay (90.0.0)
-  - MaterialComponents/private/ThumbTrack (90.0.0):
+  - MaterialComponents/private/Math (91.0.0)
+  - MaterialComponents/private/Overlay (91.0.0)
+  - MaterialComponents/private/ThumbTrack (91.0.0):
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
     - MaterialComponents/Ripple
@@ -629,63 +629,63 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/private/UIMetrics (90.0.0):
+  - MaterialComponents/private/UIMetrics (91.0.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/ProgressView (90.0.0):
+  - MaterialComponents/ProgressView (91.0.0):
     - MaterialComponents/Palettes
     - MaterialComponents/private/Math
     - MDFInternationalization
     - MotionAnimator (~> 2.1)
-  - "MaterialComponents/ProgressView+ColorThemer (90.0.0)":
+  - "MaterialComponents/ProgressView+ColorThemer (91.0.0)":
     - MaterialComponents/ProgressView
     - MaterialComponents/Themes
-  - "MaterialComponents/ProgressView+Theming (90.0.0)":
+  - "MaterialComponents/ProgressView+Theming (91.0.0)":
     - MaterialComponents/ProgressView
     - MaterialComponents/schemes/Container
-  - MaterialComponents/Ripple (90.0.0):
+  - MaterialComponents/Ripple (91.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/schemes (90.0.0):
-    - MaterialComponents/schemes/Color (= 90.0.0)
-    - MaterialComponents/schemes/Container (= 90.0.0)
-    - MaterialComponents/schemes/Shape (= 90.0.0)
-    - MaterialComponents/schemes/Typography (= 90.0.0)
-    - "MaterialComponents/schemes/Typography+BasicFontScheme (= 90.0.0)"
-  - MaterialComponents/schemes/Color (90.0.0):
+  - MaterialComponents/schemes (91.0.0):
+    - MaterialComponents/schemes/Color (= 91.0.0)
+    - MaterialComponents/schemes/Container (= 91.0.0)
+    - MaterialComponents/schemes/Shape (= 91.0.0)
+    - MaterialComponents/schemes/Typography (= 91.0.0)
+    - "MaterialComponents/schemes/Typography+BasicFontScheme (= 91.0.0)"
+  - MaterialComponents/schemes/Color (91.0.0):
     - MaterialComponents/private/Color
-  - MaterialComponents/schemes/Container (90.0.0):
+  - MaterialComponents/schemes/Container (91.0.0):
     - MaterialComponents/schemes/Color
     - MaterialComponents/schemes/Shape
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/schemes/Shape (90.0.0):
+  - MaterialComponents/schemes/Shape (91.0.0):
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
-  - MaterialComponents/schemes/Typography (90.0.0):
+  - MaterialComponents/schemes/Typography (91.0.0):
     - "MaterialComponents/schemes/Typography+BasicFontScheme"
     - MaterialComponents/Typography
-  - "MaterialComponents/schemes/Typography+BasicFontScheme (90.0.0)"
-  - MaterialComponents/ShadowElevations (90.0.0)
-  - MaterialComponents/ShadowLayer (90.0.0):
+  - "MaterialComponents/schemes/Typography+BasicFontScheme (91.0.0)"
+  - MaterialComponents/ShadowElevations (91.0.0)
+  - MaterialComponents/ShadowLayer (91.0.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (90.0.0):
+  - MaterialComponents/ShapeLibrary (91.0.0):
     - MaterialComponents/private/Math
     - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (90.0.0):
+  - MaterialComponents/Shapes (91.0.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/Slider (90.0.0):
+  - MaterialComponents/Slider (91.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Palettes
     - MaterialComponents/private/Math
     - MaterialComponents/private/ThumbTrack
     - MaterialComponents/ShadowElevations
-  - "MaterialComponents/Slider+ColorThemer (90.0.0)":
+  - "MaterialComponents/Slider+ColorThemer (91.0.0)":
     - MaterialComponents/Palettes
     - MaterialComponents/schemes/Color
     - MaterialComponents/Slider
-  - MaterialComponents/Snackbar (90.0.0):
+  - MaterialComponents/Snackbar (91.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -697,16 +697,16 @@ PODS:
     - MaterialComponents/ShadowElevations
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
-  - "MaterialComponents/Snackbar+ColorThemer (90.0.0)":
+  - "MaterialComponents/Snackbar+ColorThemer (91.0.0)":
     - MaterialComponents/schemes/Color
     - MaterialComponents/Snackbar
-  - "MaterialComponents/Snackbar+FontThemer (90.0.0)":
+  - "MaterialComponents/Snackbar+FontThemer (91.0.0)":
     - MaterialComponents/Snackbar
     - MaterialComponents/Themes
-  - "MaterialComponents/Snackbar+TypographyThemer (90.0.0)":
+  - "MaterialComponents/Snackbar+TypographyThemer (91.0.0)":
     - MaterialComponents/schemes/Typography
     - MaterialComponents/Snackbar
-  - MaterialComponents/Tabs (90.0.0):
+  - MaterialComponents/Tabs (91.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -717,48 +717,48 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/Tabs+ColorThemer (90.0.0)":
+  - "MaterialComponents/Tabs+ColorThemer (91.0.0)":
     - MaterialComponents/schemes/Color
     - MaterialComponents/Tabs
-  - "MaterialComponents/Tabs+FontThemer (90.0.0)":
+  - "MaterialComponents/Tabs+FontThemer (91.0.0)":
     - MaterialComponents/Tabs
     - MaterialComponents/Themes
-  - "MaterialComponents/Tabs+Theming (90.0.0)":
+  - "MaterialComponents/Tabs+Theming (91.0.0)":
     - MaterialComponents/schemes/Container
     - MaterialComponents/Tabs
     - "MaterialComponents/Tabs+ColorThemer"
     - "MaterialComponents/Tabs+TypographyThemer"
-  - "MaterialComponents/Tabs+TypographyThemer (90.0.0)":
+  - "MaterialComponents/Tabs+TypographyThemer (91.0.0)":
     - MaterialComponents/schemes/Typography
     - MaterialComponents/Tabs
-  - MaterialComponents/TextFields (90.0.0):
+  - MaterialComponents/TextFields (91.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Elevation
     - MaterialComponents/Palettes
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
-  - "MaterialComponents/TextFields+ColorThemer (90.0.0)":
+  - "MaterialComponents/TextFields+ColorThemer (91.0.0)":
     - MaterialComponents/TextFields
     - MaterialComponents/Themes
-  - "MaterialComponents/TextFields+ContainedInputView (90.0.0)":
+  - "MaterialComponents/TextFields+ContainedInputView (91.0.0)":
     - MaterialComponents/AnimationTiming
     - MDFInternationalization
-  - "MaterialComponents/TextFields+FontThemer (90.0.0)":
+  - "MaterialComponents/TextFields+FontThemer (91.0.0)":
     - MaterialComponents/TextFields
     - MaterialComponents/Themes
-  - "MaterialComponents/TextFields+Theming (90.0.0)":
+  - "MaterialComponents/TextFields+Theming (91.0.0)":
     - MaterialComponents/schemes/Container
     - MaterialComponents/TextFields
     - "MaterialComponents/TextFields+ColorThemer"
     - "MaterialComponents/TextFields+TypographyThemer"
-  - "MaterialComponents/TextFields+TypographyThemer (90.0.0)":
+  - "MaterialComponents/TextFields+TypographyThemer (91.0.0)":
     - MaterialComponents/schemes/Typography
     - MaterialComponents/TextFields
-  - MaterialComponents/Themes (90.0.0):
+  - MaterialComponents/Themes (91.0.0):
     - MaterialComponents/schemes/Color
     - MaterialComponents/schemes/Typography
-  - MaterialComponents/Typography (90.0.0):
+  - MaterialComponents/Typography (91.0.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
@@ -838,7 +838,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: 9c2c544202301110b29f7974a82e77fdcf12bf51
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
-  MaterialComponents: 2d4ab59f2da5ae6ea615b136dbbad86cdcd91c7f
+  MaterialComponents: 9b634b0dedadff0f5936267db4eb6bd6b642f7fc
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
