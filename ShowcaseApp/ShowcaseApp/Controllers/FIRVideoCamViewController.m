@@ -320,7 +320,7 @@ static NSString *const kFakeProductItemNumberText = @"12345678";
   [self.previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
   CALayer *rootLayer = [self.previewView layer];
   [rootLayer setMasksToBounds:YES];
-  [self.previewView setFrame:[rootLayer bounds]];
+  [self.previewLayer setFrame:[rootLayer bounds]];
   [rootLayer addSublayer:self.previewLayer];
 }
 
