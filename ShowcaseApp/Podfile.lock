@@ -711,7 +711,7 @@ PODS:
     - PINCache (= 3.0.1-beta.8)
     - PINRemoteImage/Core
   - PromisesObjC (1.2.8)
-  - Protobuf (3.11.2)
+  - Protobuf (3.11.3)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -780,7 +780,7 @@ SPEC CHECKSUMS:
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
+  Protobuf: 0e94afe3b47cb11876eb6aee296638711a24bf75
 
 PODFILE CHECKSUM: f6bc8937e469bf2423fd82e97371a31d44e05032
 
