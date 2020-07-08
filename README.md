@@ -1,3 +1,5 @@
+UPDATE: This project has been moved to https://github.com/googlesamples/mlkit/tree/master/ios/showcase/vision-showcase as part of the ML Kit's new standalone SDK. [Learn more](https://developers.google.com/ml-kit)
+
 # ML Kit Showcase Apps with Material Design
 
 These apps demonstrate how to build an end-to-end user experience with [Google ML Kit APIs](https://developers.google.com/ml-kit) and following the new [Material for ML design guidelines](https://material.io/collections/machine-learning/).
