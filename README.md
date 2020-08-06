@@ -6,6 +6,12 @@ These apps demonstrate how to build an end-to-end user experience with [Google M
 
 The goal is to make it as easy as possible to integrate ML Kit into your app with an experience that has been user tested.
 
+## Status
+
+![Status: Archived](https://img.shields.io/badge/Status-Archived-red)
+
+This sample is no longer actively maintained and is left here for reference only.
+
 ## Apps
 
 You can open each of the following apps as an Xcode project, and run
